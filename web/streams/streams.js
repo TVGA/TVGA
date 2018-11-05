@@ -1,3 +1,5 @@
+const nrc = require('node-run-cmd');
+
 let streamLogin = require('./streamLogin.json');
 
 let canais = [
