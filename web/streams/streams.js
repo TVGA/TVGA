@@ -34,4 +34,4 @@ let dataCallback = function(data) {
 
 let options = { mode: 'parallel', onData: dataCallback, verbose: true };
 
-nrc.run(commands, options);
+nrc.run(commands[0], options);
