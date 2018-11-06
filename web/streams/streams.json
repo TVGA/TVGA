@@ -8,7 +8,7 @@
       {
         "name": "elevensports1",
         "script": "./stream.js",
-        "node_args": "--canal=elevensports1", 
+        "node_args": "--canal=elevensports1"
       }
     ]
   }
