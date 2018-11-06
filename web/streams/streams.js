@@ -12,7 +12,7 @@ let canais = [
         'nome': 'elevensports1'
     },
     {
-        'id': '3987',
+        'id': '7038',
         'nome': 'tvcine1'
     }
 ]
