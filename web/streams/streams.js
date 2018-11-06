@@ -4,7 +4,7 @@ let streamLogin = require('./streamLogin.json');
 
 let canais = [
     {
-        'id': '7049',
+        'id': '160',
         'nome': 'sporttv1'
     },
     {
