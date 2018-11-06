@@ -34,7 +34,7 @@ for canal in canais:
     args = '--canal {} --username {} --password {}'.format(canal, streamLogin[i]['username'], streamLogin[i]['password'])
     pm2_json['apps'].append({
         'name': canal,
-        'script': './stream.js',
+        'script': '../web/streams/stream.js',
         'args': args
     })
     i += 1
