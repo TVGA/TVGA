@@ -10,6 +10,10 @@ let canais = [
     {
         'id': '29089',
         'nome': 'elevensports1'
+    },
+    {
+        'id': '3987',
+        'nome': 'tvcine1'
     }
 ]
 

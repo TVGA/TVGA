@@ -13,4 +13,8 @@ router.get('/elevensports1', function(req, res, next) {
   res.render('stream', { title: 'TVGA > ELEVEN SPORTS 1', file: '/stream/elevensports1.m3u8', poster: 'https://video.toggle.sg/image/9077680/16x9/947/533/753c9d2d171ad7915880e607c324fb0c/LT/eleven-sports-1.png'});
 });
 
+router.get('/tvcine1', function(req, res, next) {
+  res.render('stream', { title: 'TVGA > TVCINE 1', file: '/stream/tvcine1.m3u8', poster: 'https://video.toggle.sg/image/9077680/16x9/947/533/753c9d2d171ad7915880e607c324fb0c/LT/eleven-sports-1.png'});
+});
+
 module.exports = router;
