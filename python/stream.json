@@ -1,0 +1,14 @@
+{
+    "apps": [
+        {
+            "name": "sporttv1",
+            "script": "../web/streams/stream.js",
+            "args": "--canal sporttv1 --username imthebest.fcktherest@gmail.com --password 2LKDGgDTyz"
+        },
+        {
+            "name": "elevensports1",
+            "script": "../web/streams/stream.js",
+            "args": "--canal elevensports1 --username imthe.bestfcktherest@gmail.com --password MJDXEhnNrq"
+        }
+    ]
+}

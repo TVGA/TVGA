@@ -1,4 +1,5 @@
 const nrc = require('node-run-cmd');
+let canais = require('../../python/canais.json');
 
 function grab(flag) {
     let index = process.argv.indexOf(flag);
@@ -6,19 +7,11 @@ function grab(flag) {
 }
 
 let canal = grab('--canal');
+let username = grab('--username');
+let password = grab('--password')
 
-let canais = {
-    'sporttv1' : 160,
-    'elevensports1': 29089
-}
-
-if(canal) {
-    console.log(canal);
-
-    let username = 'imthe.bestfcktherest@gmail.com';
-    let password = 'MJDXEhnNrq';
-
-    let url = 'http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + canais[canal] + '.ts';
+if(canal && username && password) {
+    let url = 'http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + canais[canal]['id'] + '.ts';
 
     let command = 'ffmpeg -i ' + url + ' -c:v copy -hls_time 3 -hls_list_size 3 -hls_flags delete_segments -f hls ../public/stream/' + canal + '.m3u8';
 
@@ -30,5 +23,5 @@ if(canal) {
 
     nrc.run(command, options);
 } else {
-    console.log('Erro: Nenhum canal especificado.');
+    console.log('Erro');
 }
