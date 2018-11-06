@@ -1,4 +1,5 @@
 import json
+from subprocess import call
 
 streamLogin = [
     {
@@ -41,3 +42,6 @@ for canal in canais:
 
 with open('stream.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
+
+call('pm2 start stream.json')
+call('pm2 update')
