@@ -1,7 +1,5 @@
 import json
 
-#
-
 streamLogin = [
     {
         'username': 'imthebest.fcktherest@gmail.com',
@@ -15,7 +13,7 @@ streamLogin = [
 
 canais = {
     'sporttv1': {
-        'id': 160,
+        'id': 7049,
         'nome': 'SPORT TV 1'
     },
     'elevensports1': {
