@@ -1,0 +1,16 @@
+{
+    "apps": [
+      {
+        "name": "sporttv1",
+        "script": "./stream.js",
+        "node_args": "--canal=sporttv1", 
+        "exec_mode": "cluster"
+      },
+      {
+        "name": "elevensports1",
+        "script": "./stream.js",
+        "node_args": "--canal=elevensports1", 
+        "exec_mode": "cluster"
+      }
+    ]
+  }
