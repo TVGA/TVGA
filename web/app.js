@@ -2,9 +2,9 @@
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
+const subdomain = require('express-subdomain');
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-const subdomain = require('express-subdomain');
 const constants = require('constants');
 const helmet = require('helmet')
 let path = require('path');
@@ -15,6 +15,8 @@ let indexRouter = require('./routes/index');
 let adminRouter = require('./routes/admin')
 
 let app = express();
+
+app.use(subdomain('admin', adminRouter));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,7 +30,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use(subdomain('admin', adminRouter));
 
 // Certificate
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/tvga.ml/privkey.pem', 'utf8');
