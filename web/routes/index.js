@@ -17,8 +17,8 @@ router.get('/elevensports1', function(req, res, next) {
 //   res.render('stream', { title: 'TVGA > BENFICA TV', file: '/stream/benficatv.m3u8', poster: 'https://www.atelevisao.com/wp-content/uploads/2017/08/benfica-tv.jpg'});
 // });
 
-// router.get('/tvcine1', function(req, res, next) {
-//   res.render('stream', { title: 'TVGA > TVCINE 1', file: '/stream/tvcine1.m3u8', poster: 'https://vignette.wikia.nocookie.net/logopedia/images/a/a7/TVC1_2012.png/revision/latest?cb=20140404133828'});
-// });
+router.get('/tvcine1', function(req, res, next) {
+  res.render('stream', { title: 'TVGA > TVCINE 1', file: '/stream/tvcine1.m3u8', poster: 'https://vignette.wikia.nocookie.net/logopedia/images/a/a7/TVC1_2012.png/revision/latest?cb=20140404133828'});
+});
 
 module.exports = router;

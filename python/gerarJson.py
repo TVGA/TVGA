@@ -21,6 +21,10 @@ canais = {
     'elevensports1': {
         'id': 29089,
         'nome': 'ELEVEN SPORTS 1'
+    },
+    'tvcine1': {
+        'id': 3987,
+        'nome': 'TVCINE 1'
     }
 }
 
@@ -44,5 +48,6 @@ for canal in canais:
 with open('stream.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
 
+os.system('rm ../web/public/stream/*')
 os.system('pm2 start stream.json')
 os.system('pm2 update')
