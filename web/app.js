@@ -16,6 +16,7 @@ let adminRouter = require('./admin/routes/admin')
 
 let app = express();
 
+app.set('views', path.join(__dirname, 'admin/views'));
 app.use(subdomain('admin', adminRouter));
 
 // view engine setup
