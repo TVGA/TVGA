@@ -1,8 +1,8 @@
 let express = require('express');
-let router = express.Router();
+let app = express();
 
-router.get('/', function(req, res) {
-    res.render('admin');
+app.get('/', function(req, res) {
+    res.send('admin');
 });
 
-module.exports = router;
+module.exports = app;
