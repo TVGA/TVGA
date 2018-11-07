@@ -12,7 +12,7 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 let indexRouter = require('./routes/index');
-let adminRouter = require('./admin/routes/admin')
+let adminApp = require('./admin/app')
 
 let app = express();
 
