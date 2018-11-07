@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(subdomain('admin', adminRouter));
+app.use(subdomain('admin', adminApp));
 app.use('/', indexRouter);
 
 // Certificate
