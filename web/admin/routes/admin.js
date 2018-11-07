@@ -1,8 +1,10 @@
 let express = require('express');
 let app = express();
 
+app.set('views', path.join(__dirname, 'views'));
+
 app.get('/', function(req, res) {
-    res.send('admin');
+    res.render('admin');
 });
 
 module.exports = app;
