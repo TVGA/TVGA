@@ -12,6 +12,7 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 let indexRouter = require('./routes/index');
+let adminRouter = require('./admin/routes/admin')
 
 let app = express();
 
@@ -26,8 +27,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(subdomain('admin', indexRouter));
 app.use('/', indexRouter);
+app.use(subdomain('admin', adminRouter));
 
 // Certificate
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/tvga.ml/privkey.pem', 'utf8');
