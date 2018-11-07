@@ -12,6 +12,7 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
     "helmet": "^3.14.0",
     "morgan": "^1.9.1",
     "node-run-cmd": "^1.0.1"
