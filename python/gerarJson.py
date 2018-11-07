@@ -2,10 +2,10 @@ import json
 import os
 
 streamLogin = [
-    {
-        'username': 'imthebestfckthe.rest@gmail.com',
-        'password': 'pLXtrNDPCG'
-    },
+    # {
+    #     'username': 'imthebestfckthe.rest@gmail.com',
+    #     'password': 'pLXtrNDPCG'
+    # },
     {
         'username': 'imthebest.fcktherest@gmail.com',
         'password': '2LKDGgDTyz'
@@ -25,11 +25,12 @@ canais = {
     'elevensports1': {
         'id': 29089,
         'nome': 'ELEVEN SPORTS 1'
-    },
-    'tvcine1': {
-        'id': 3987,
-        'nome': 'TVCINE 1'
     }
+    # },
+    # 'tvcine1': {
+    #     'id': 3987,
+    #     'nome': 'TVCINE 1'
+    # }
 }
 
 with open('canais.json', 'w') as outfile:
