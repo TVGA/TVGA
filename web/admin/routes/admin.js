@@ -1,8 +1,8 @@
 let express = require('express');
 let router = express.Router();
 
-router.get('/', function(req, res, next) {
-  res.render('admin', { title: 'TVGA'});
+router.get('/', function(req, res) {
+    res.send('Admin Panel');
 });
 
 module.exports = router;
