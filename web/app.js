@@ -16,9 +16,6 @@ let adminRouter = require('./admin/routes/admin')
 
 let app = express();
 
-app.set('views', path.join(__dirname, 'admin/views'));
-app.use(subdomain('admin', adminRouter));
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -30,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(subdomain('admin', adminRouter));
 app.use('/', indexRouter);
 
 // Certificate
