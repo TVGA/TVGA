@@ -4,6 +4,7 @@ const http = require('http');
 const https = require('https');
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
+const subdomain = require('express-subdomain');
 const constants = require('constants');
 const helmet = require('helmet')
 let path = require('path');
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(subdomain('api', indexRouter));
 app.use('/', indexRouter);
 
 // Certificate
