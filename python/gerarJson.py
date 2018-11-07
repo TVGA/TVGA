@@ -14,7 +14,8 @@ streamLogin = [
 
 canais = {
     'sporttv1': {
-        'id': 7049,
+        # 'id': 7049,
+        'id': 160,
         'nome': 'SPORT TV 1'
     },
     'elevensports1': {
