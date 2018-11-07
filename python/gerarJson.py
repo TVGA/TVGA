@@ -3,6 +3,10 @@ import os
 
 streamLogin = [
     {
+        'username': 'imthebestfckthe.rest@gmail.com',
+        'password': 'pLXtrNDPCG'
+    },
+    {
         'username': 'imthebest.fcktherest@gmail.com',
         'password': '2LKDGgDTyz'
     },
