@@ -9,7 +9,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 router.get('/', function(req, res) {
-    res.render('index');
+    res.render('admin');
 });
 
 module.exports = router;
