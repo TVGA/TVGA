@@ -13,12 +13,11 @@ canais = {
     'elevensports1': {
         'id': 29089,
         'nome': 'ELEVEN SPORTS 1'
+    },
+    'tvcine1': {
+        'id': 3987,
+        'nome': 'TVCINE 1'
     }
-    # },
-    # 'tvcine1': {
-    #     'id': 3987,
-    #     'nome': 'TVCINE 1'
-    # }
 }
 
 with open('canais.json', 'w') as outfile:
