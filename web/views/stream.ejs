@@ -1,7 +1,18 @@
 <h1><%= title %></h1>
-<div id="stream" style="width: 50%; margin-left: 25%"></div>
+<video-js id=vid1 width=600 height=300 class="vjs-default-skin" controls>
+    <source
+        src="<%= file %>'"
+        type="application/x-mpegURL">
+</video-js>
+<script src="/javascripts/video.js"></script>
+<script src="/javascripts/videojs-http-streaming.min.js"></script>
+<script>
+    var player = videojs('vid1');
+    player.play();
+</script>
+<!-- <div id="stream" style="width: 50%; margin-left: 25%"></div>
 
 <script>
     let stream = new Playerjs({id: "stream", file: '<%= file %>', poster: '<%= poster %>', autoplay: true});
 </script>
-<script src="/javascripts/speedtest.js"></script>
+<script src="/javascripts/speedtest.js"></script> -->
