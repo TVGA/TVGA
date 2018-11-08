@@ -1,20 +1,8 @@
 import json
 import os
 
-streamLogin = [
-    # {
-    #     'username': 'imthebestfckthe.rest@gmail.com',
-    #     'password': 'pLXtrNDPCG'
-    # },
-    {
-        'username': 'imthebest.fcktherest@gmail.com',
-        'password': '2LKDGgDTyz'
-    },
-    {
-        'username': 'imthe.bestfcktherest@gmail.com',
-        'password': 'MJDXEhnNrq'
-    }
-]
+with open('logins.json', 'r') as fp:
+    logins = json.load(fp)
 
 canais = {
     'sporttv1': {
@@ -42,13 +30,16 @@ pm2_json = {
 
 i = 0
 for canal in canais:
-    args = '--canal {} --username {} --password {}'.format(canal, streamLogin[i]['username'], streamLogin[i]['password'])
-    pm2_json['apps'].append({
-        'name': canal,
-        'script': '../web/streams/stream.js',
-        'args': args
-    })
-    i += 1
+    try:
+        args = '--canal {} --username {} --password {}'.format(canal, logins[i]['username'], logins[i]['password'])
+        pm2_json['apps'].append({
+            'name': canal,
+            'script': '../web/streams/stream.js',
+            'args': args
+        })
+        i += 1
+    except:
+        break
 
 with open('stream.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
