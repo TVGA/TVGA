@@ -40,7 +40,7 @@ for canal in canais:
     except:
         break
 
-with open('stream.json', 'w') as outfile:
+with open('streams.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
 
 os.system('rm ../web/public/stream/*')
