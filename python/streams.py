@@ -54,5 +54,5 @@ with open('stream.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
 
 os.system('rm ../web/public/stream/*')
-os.system('pm2 start stream.json')
+os.system('pm2 start streams.json')
 os.system('pm2 update')
