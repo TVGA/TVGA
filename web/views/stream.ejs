@@ -1,13 +1,9 @@
 <h1><%= title %></h1>
-<video id="vid1" class="video-js vjs-default-skin vjs-big-play-centered"
-    controls
-    width="50%"
-    height="50%"
-    data-setup='{ 
-        "aspectRatio":"16:9", "fluid": true,
-        "sources": [{ "type": "application/x-mpegURL", "src": "<%= file %>"}]
-    }'
-></video>
+<video-js id=vid1 width=600 height=300 class="vjs-default-skin" controls>
+    <source
+        src=<%= file %>
+        type="application/x-mpegURL">
+</video-js>
 <script>
     var player = videojs('vid1');
     player.play();
