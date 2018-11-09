@@ -13,6 +13,10 @@ canais = {
         'id': 29089,
         'nome': 'ELEVEN SPORTS 1'
     },
+    'benficatv1': {
+        'id': 3944,
+        'nome': 'BENFICA TV'
+    },
     'tvcine1': {
         'id': 3987,
         'nome': 'TVCINE 1'
@@ -28,10 +32,6 @@ canais = {
     'tvcine4': {
         'id': 3990,
         'nome': 'TVCINE 4'
-    },
-    'benficatv1': {
-        'id': 3944,
-        'nome': 'BENFICA TV'
     }
 }
 
