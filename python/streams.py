@@ -17,6 +17,22 @@ canais = {
     'tvcine1': {
         'id': 3987,
         'nome': 'TVCINE 1'
+    },
+    'tvcine2': {
+        'id': 3988,
+        'nome': 'TVCINE 2'
+    },
+    'tvcine3': {
+        'id': 3989,
+        'nome': 'TVCINE 3'
+    },
+    'tvcine4': {
+        'id': 3990,
+        'nome': 'TVCINE 4'
+    },
+    'benficatv1': {
+        'id': 3944,
+        'nome': 'BENFICA TV'
     }
 }
 
