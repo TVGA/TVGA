@@ -25,6 +25,26 @@ canais = {
         'id': 29125,
         'nome': 'ELEVEN SPORTS 1'
     },
+    'elevensports2': {
+        'id': 29124,
+        'nome': 'ELEVEN SPORTS 2'
+    },
+    'elevensports3': {
+        'id': 29123,
+        'nome': 'ELEVEN SPORTS 3'
+    },
+    'elevensports4': {
+        'id': 29122,
+        'nome': 'ELEVEN SPORTS 4'
+    },
+    'elevensports5': {
+        'id': 29121,
+        'nome': 'ELEVEN SPORTS 5'
+    },
+    'elevensports6': {
+        'id': 29120,
+        'nome': 'ELEVEN SPORTS 6'
+    },
     'benficatv1': {
         'id': 3944,
         'nome': 'BENFICA TV'
