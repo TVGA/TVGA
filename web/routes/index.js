@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/:canal', function(req, res, next) {
   let canal = req.params.canal;
-  res.render('stream', { title: 'TVGA > ' + canais[canal]['nome'], file: '/stream/' + canais[canal]['id'] + '.m3u8' });
+  res.render('stream', { title: 'TVGA > ' + canais[canal]['nome'], file: '/stream/' + canal + '.m3u8' });
 });
 
 module.exports = router;
