@@ -1,5 +1,10 @@
 <h1><%= title %></h1>
-<a href="/sporttv1">SPORT TV 1</a>
+<% for(let canal of  canais) { %>
+    let href = '/' + canal;
+    <a href=href>EE</a>
+    <br>
+<% } %>
+<!-- <a href="/sporttv1">SPORT TV 1</a>
 <br>
 <a href="/elevensports1">ELEVEN SPORTS 1</a>
 <br>
@@ -11,4 +16,4 @@
 <br>
 <a href="/tvcine3">TVCINE 3</a>
 <br>
-<a href="/tvcine4">TVCINE 4</a>
+<a href="/tvcine4">TVCINE 4</a> -->
