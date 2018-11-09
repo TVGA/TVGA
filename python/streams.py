@@ -14,7 +14,7 @@ canais = {
         'nome': 'SPORT TV 2'
     },
     'sporttv3': {
-        'id': 3994,
+        'id': 16736,
         'nome': 'SPORT TV 3'
     },
     'sporttv4': {
