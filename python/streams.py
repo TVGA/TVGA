@@ -62,7 +62,7 @@ canais = {
         'nome': 'TVCINE 2'
     },
     'tvcine3': {
-        'id': 3989,
+        'id': 7036,
         'nome': 'TVCINE 3'
     },
     'tvcine4': {
