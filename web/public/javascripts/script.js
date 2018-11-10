@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     $(window).resize(function() {
         if ($(window).width() > 720) {
-            $(this).toggleClass('open')
+            $('#nav-icon').toggleClass('open')
             $('#nav-menu').hide();
             $('#content').css('margin-top', '0');
         }
