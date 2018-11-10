@@ -81,6 +81,10 @@ nav ul li a {
     display: none;
 }
 
+#content {
+    margin-top: 0;
+}
+
 @media screen and (max-width: 1280px) {
     header {
         height: 6.995vw;
