@@ -20,7 +20,9 @@ $(document).ready(function(){
 
     $(window).resize(function() {
         if ($(window).width() > 720) {
-            $('#nav-icon').toggleClass('open')
+            if($('#nav-menu').css('display') != 'none') {
+                $('#nav-icon').toggleClass('open');
+            }
             $('#nav-menu').hide();
             $('#content').css('margin-top', '0');
         }
