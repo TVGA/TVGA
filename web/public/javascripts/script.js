@@ -17,4 +17,8 @@ $(document).ready(function(){
             $('#content').animate({ marginTop: '0' }, 600);
         }                 
     });
+
+    if ($(window).width() > 720) {
+        alert('Bigger than 720');
+    }
 });
