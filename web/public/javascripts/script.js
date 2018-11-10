@@ -20,8 +20,8 @@ $(document).ready(function(){
 
     $(window).resize(function() {
         if ($(window).width() > 720) {
-           console.log('ff')
+            $('#nav-menu').hide();
+            $('#content').css('margin-top', '0');
         }
-
     });
 });
