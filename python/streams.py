@@ -6,7 +6,7 @@ with open('logins.json', 'r') as fp:
 
 canais = {
     'sporttv1': {
-        'id': 3992,
+        'id': 16740,
         'nome': 'SPORT TV 1'
     },
     'sporttv2': {
