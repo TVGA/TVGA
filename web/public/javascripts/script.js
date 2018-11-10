@@ -10,11 +10,11 @@ $(document).ready(function(){
     $('#nav-icon').click(function(){
         $(this).toggleClass('open');
         if($('#nav-menu').css('display') == 'none') {
-            $('#nav-menu').slideDown('slow');
-            $('#content').css('margin-top', '73vw');
+            $('#nav-menu').slideDown(600);
+            $('#content').animate({ marginTop: '73vw' }, 600);
         } else {
-            $('#nav-menu').slideUp('slow');
-            $('#content').css('margin-top', '0');
+            $('#nav-menu').slideUp(600);
+            $('#content').animate({ marginTop: '0' }, 600);
         }                 
     });
 });
