@@ -18,7 +18,10 @@ $(document).ready(function(){
         }                 
     });
 
-    if ($(window).width() > 720) {
-        alert('Bigger than 720');
-    }
+    $(window).resize(function() {
+        if ($(window).width() > 720) {
+           console.log('ff')
+        }
+
+    });
 });
