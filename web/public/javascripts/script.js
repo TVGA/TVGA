@@ -19,12 +19,9 @@ $(document).ready(function(){
     });
 });
 
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 600);
+$("a[href*='/#']").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top}, 600);
 });
 
 $(window).resize(function() {
