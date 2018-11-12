@@ -1,5 +1,11 @@
-<% for(let key in canais) { %>
-    <a style="color: white" href="<%= key %>"><%= canais[key]['nome'] %></a>
-    <br>
-    <br>
-<% } %>
+<div class="slider"></div>
+
+<div id="canais">
+    <% for(let grupo in canais) { %>
+        <% for(let canal in canais[grupo]) { %>
+            <a style="color: white" href="<%= canal %>"><%= canais[grupo][canal]['nome'] %></a>
+            <br>
+            <br>
+        <% } %>
+    <% } %>
+</div>

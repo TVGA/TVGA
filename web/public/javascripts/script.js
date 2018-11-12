@@ -11,20 +11,28 @@ $(document).ready(function(){
         $(this).toggleClass('open');
         if($('#nav-menu').css('display') == 'none') {
             $('#nav-menu').slideDown(600);
-            $('#content').animate({ marginTop: '73vw' }, 600);
+            $('.slider').animate({ marginTop: '76vw' }, 600);
         } else {
             $('#nav-menu').slideUp(600);
-            $('#content').animate({ marginTop: '0' }, 600);
+            $('.slider').animate({ marginTop: '0' }, 600);
         }                 
     });
+});
 
-    $(window).resize(function() {
-        if ($(window).width() > 720) {
-            if($('#nav-menu').css('display') != 'none') {
-                $('#nav-icon').toggleClass('open');
-            }
-            $('#nav-menu').hide();
-            $('#content').css('margin-top', '0');
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 600);
+});
+
+$(window).resize(function() {
+    if ($(window).width() > 720) {
+        if($('#nav-menu').css('display') != 'none') {
+            $('#nav-icon').toggleClass('open');
         }
-    });
+        $('#nav-menu').hide();
+        $('.slider').css('margin-top', '0');
+    }
 });

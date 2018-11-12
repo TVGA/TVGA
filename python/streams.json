@@ -3,12 +3,82 @@
         {
             "name": "sporttv1",
             "script": "../web/streams/stream.js",
-            "args": "--canal sporttv1 --username imthebest.fcktherest@gmail.com --password 2LKDGgDTyz"
+            "args": "--canal sporttv1 --username novtvga.ge.ra.l@gmail.com --password WZfJ2EWjgl"
+        },
+        {
+            "name": "sporttv2",
+            "script": "../web/streams/stream.js",
+            "args": "--canal sporttv2 --username novtvga.ge.r.al@gmail.com --password wx7lof7LUQ"
+        },
+        {
+            "name": "sporttv3",
+            "script": "../web/streams/stream.js",
+            "args": "--canal sporttv3 --username novtvga.ge.r.a.l@gmail.com --password 5JpEce7iwQ"
+        },
+        {
+            "name": "sporttv4",
+            "script": "../web/streams/stream.js",
+            "args": "--canal sporttv4 --username novtvga.g.eral@gmail.com --password mtb5WxxwKI"
+        },
+        {
+            "name": "sporttv5",
+            "script": "../web/streams/stream.js",
+            "args": "--canal sporttv5 --username novtvga.g.era.l@gmail.com --password Qoy0L5NrIK"
         },
         {
             "name": "elevensports1",
             "script": "../web/streams/stream.js",
-            "args": "--canal elevensports1 --username imthe.bestfcktherest@gmail.com --password MJDXEhnNrq"
+            "args": "--canal elevensports1 --username novtvga.g.er.al@gmail.com --password SIbd0q4O65"
+        },
+        {
+            "name": "elevensports2",
+            "script": "../web/streams/stream.js",
+            "args": "--canal elevensports2 --username novtvga.g.er.a.l@gmail.com --password m8cH9qsjeH"
+        },
+        {
+            "name": "elevensports3",
+            "script": "../web/streams/stream.js",
+            "args": "--canal elevensports3 --username novtvga.g.e.ral@gmail.com --password 6AWj8i9O9z"
+        },
+        {
+            "name": "elevensports4",
+            "script": "../web/streams/stream.js",
+            "args": "--canal elevensports4 --username novtvga.g.e.ra.l@gmail.com --password EmtXAd8W5P"
+        },
+        {
+            "name": "elevensports5",
+            "script": "../web/streams/stream.js",
+            "args": "--canal elevensports5 --username novtvga.g.e.r.al@gmail.com --password d6fpjlxexm"
+        },
+        {
+            "name": "elevensports6",
+            "script": "../web/streams/stream.js",
+            "args": "--canal elevensports6 --username novtvga.g.e.r.a.l@gmail.com --password rKRGiSbhz7"
+        },
+        {
+            "name": "benficatv1",
+            "script": "../web/streams/stream.js",
+            "args": "--canal benficatv1 --username novtvg.ageral@gmail.com --password k4FxDqdELW"
+        },
+        {
+            "name": "tvcine1",
+            "script": "../web/streams/stream.js",
+            "args": "--canal tvcine1 --username novtvg.agera.l@gmail.com --password 5psSPNOZDe"
+        },
+        {
+            "name": "tvcine2",
+            "script": "../web/streams/stream.js",
+            "args": "--canal tvcine2 --username novtvg.ager.a.l@gmail.com --password NNULMnLNuV"
+        },
+        {
+            "name": "tvcine3",
+            "script": "../web/streams/stream.js",
+            "args": "--canal tvcine3 --username novtvg.age.ral@gmail.com --password uFh9nbUTa9"
+        },
+        {
+            "name": "tvcine4",
+            "script": "../web/streams/stream.js",
+            "args": "--canal tvcine4 --username novtvg.age.ra.l@gmail.com --password wAWqYgH7n2"
         }
     ]
 }
