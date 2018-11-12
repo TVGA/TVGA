@@ -8,7 +8,11 @@ function unhover(element, src) {
 
 $(document).ready(function(){
     let path = window.location.pathname;
-    console.log(path);
+    
+    if(path != '/') {
+        $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '/#canais');
+        $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '/#canais');
+    }
 
     $('#nav-icon').click(function(){
         $(this).toggleClass('open');
