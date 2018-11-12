@@ -1,3 +1,11 @@
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 110) {       
+        $('a[href="#top"]').css('display', 'block');   
+    } else {
+        $('a[href="#top"]').css('display', 'none');
+    }
+});
+
 function hover(element, src) {
     element.attr('src', src);
 }
