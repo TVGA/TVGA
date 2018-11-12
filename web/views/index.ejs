@@ -2,10 +2,12 @@
 
 <div id="canais">
     <% for(let grupo in canais) { %>
+        <ul class="press">
         <% for(let canal in canais[grupo]) { %>
-            <a style="color: white" href="<%= canal %>"><%= canais[grupo][canal]['nome'] %></a>
-            <br>
-            <br>
+            <li>
+                <a href="<%= canal %>"><div class="press-logo hvr-bob" style="background: #0d0f14 url('<%= canal %>.png') no-repeat center; background-size: cover;"></div></a>
+            </li>
         <% } %>
+        </ul>
     <% } %>
 </div>
