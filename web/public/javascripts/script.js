@@ -7,6 +7,9 @@ function unhover(element, src) {
 }
 
 $(document).ready(function(){
+    let path = window.location.pathname;
+    console.log(path);
+
     $('#nav-icon').click(function(){
         $(this).toggleClass('open');
         if($('#nav-menu').css('display') == 'none') {
