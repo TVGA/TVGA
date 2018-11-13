@@ -52,10 +52,10 @@ app.use(helmet.hsts({
 app.use('/', indexRouter);
 
 // Starting both http & https servers
-const httpServer = http.createServer(function (req, res) {
-    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-    res.end();
-});
+// const httpServer = http.createServer(function (req, res) {
+//     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+//     res.end();
+// });
 const httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(80, () => {
