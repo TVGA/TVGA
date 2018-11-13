@@ -120,8 +120,8 @@ footer span {
 
 .top {
     position: fixed; 
-    right: 1.5vw; 
-    bottom: 1vw; 
+    right: 1.5%;
+    bottom: 3.5%;
     width: 3.5vw; 
     height: 3.5vw; 
     background: #343432; 
@@ -360,7 +360,7 @@ footer span {
     
     .top i {
         padding: 12%; 
-        font-size: 8vw; 
+        font-size: 7vw; 
     }
 }
 
