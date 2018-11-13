@@ -118,6 +118,24 @@ footer span {
     line-height: 90px;
 }
 
+.top {
+    position: fixed; 
+    right: 1.5vw; 
+    bottom: 1vw; 
+    width: 3.5vw; 
+    height: 3.5vw; 
+    background: #343432; 
+    border-radius: 1vw; 
+    box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75); 
+    display: none;
+}
+
+.top i {
+    padding: 25%; 
+    font-size: 2vw; 
+    color: white;
+}
+
 @media screen and (max-width: 1280px) {
     header {
         height: 6.995vw;
@@ -163,6 +181,16 @@ footer span {
 
     .slider {
         height: 56vw;
+    }
+
+    .top {
+        width: 6.5vw; 
+        height: 6.5vw; 
+    }
+    
+    .top i {
+        padding: 17%; 
+        font-size: 5vw; 
     }
 }
 
@@ -323,6 +351,16 @@ footer span {
 
     .slider {
         height: 70vw;
+    }
+
+    .top {
+        width: 9.5vw; 
+        height: 9.5vw; 
+    }
+    
+    .top i {
+        padding: 12%; 
+        font-size: 8vw; 
     }
 }
 
