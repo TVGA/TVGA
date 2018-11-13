@@ -111,12 +111,11 @@ footer {
     background: #0d0f14;
     color: white;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 footer span {
-    position: relative;
-    top: 1.8vw;
+    line-height: 90px;
 }
 
 @media screen and (max-width: 1280px) {
