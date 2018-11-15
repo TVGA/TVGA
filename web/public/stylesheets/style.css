@@ -188,6 +188,7 @@ footer {
     color: white;
     text-align: center;
     font-size: 1.4em;
+    position: relative;
 }
 
 footer span {
