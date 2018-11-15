@@ -1,11 +1,6 @@
 <h1><%= title %></h1>
-<!-- <div id="stream" style="width: 50%; margin-left: 25%"></div>
 
-<script>
-    let stream = new Playerjs({id: "stream", file: '<%= file %>', autoplay: true});
-</script> -->
-
-<video id=player width=600 height=300 class="video-js vjs-default-skin" controls>
+<video style="margin: 15vw" id=player width=600 height=300 class="video-js vjs-default-skin" controls>
     <source src="<%= file %>" type="application/x-mpegURL">
 </video>
 <link rel="stylesheet" href="stylesheets/video-js.css">
