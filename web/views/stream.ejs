@@ -1,8 +1,11 @@
 <h1><%= title %></h1>
 
-<video id=player width=600 height=300 class="video-js vjs-default-skin" controls>
-    <source src="<%= file %>" type="application/x-mpegURL">
-</video>
+<div style="margin: 10vw 30vw">
+    <video id=player width=600 height=300 class="video-js vjs-default-skin" controls>
+        <source src="<%= file %>" type="application/x-mpegURL">
+    </video>
+</div>
+
 <link rel="stylesheet" href="stylesheets/video-js.css">
 <script src="javascripts/video.js"></script>
 <script src="javascripts/videojs-contrib-hlsjs.min.js"></script>
