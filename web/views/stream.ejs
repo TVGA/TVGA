@@ -1,14 +1,14 @@
 <h1><%= title %></h1>
-<div id="stream" style="width: 50%; margin-left: 25%"></div>
+<!-- <div id="stream" style="width: 50%; margin-left: 25%"></div>
 
 <script>
     let stream = new Playerjs({id: "stream", file: '<%= file %>', autoplay: true});
-</script>
+</script> -->
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <!-- Or if you want a more recent canary version -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
-<video id="video"></video>
+<video id="video" width="70vw"></video>
 <script>
   var video = document.getElementById('video');
   if(Hls.isSupported()) {
