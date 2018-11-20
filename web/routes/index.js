@@ -14,8 +14,4 @@ router.get('/:canal', function(req, res, next) {
   res.render('stream', { title: 'TVGA > ' + canais[grupo][canal]['nome'], file: '/stream/' + canal + '.m3u8' });
 });
 
-router.get('/lista/stv1', function(req, res, next) {
-  res.redirect('/stream/sporttv1.m3u8');
-});
-
 module.exports = router;
