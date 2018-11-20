@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(subdomain('admin', adminApp));
 app.use('/', indexRouter);
-app.use('/stream', apiLimiter);
+app.use(apiLimiter);
 
 // Certificate
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/tvga.ml/privkey.pem', 'utf8');
