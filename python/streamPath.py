@@ -2,7 +2,7 @@ import random
 import json
 import os
 
-hash = random.getrandbits(128)
+hash = random.getrandbits(32)
 
 xHash = [hash]
 
