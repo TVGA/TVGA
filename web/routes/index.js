@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/:canal', function(req, res, next) {
   let canal = req.params.canal;
-  let grupo = canal.slice(0, -1);
+  let grupo = Object.keys(canais).find(key => canais[key] === canal);
   res.render('stream', { title: 'TVGA > ' + canais[grupo][canal]['nome'], file: '/stream/' + canal + '.m3u8' });
 });
 

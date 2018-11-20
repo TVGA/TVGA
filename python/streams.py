@@ -81,6 +81,10 @@ canais = {
         'fox': {
             'id': 7030,
             'nome': 'FOX'
+        },
+        'foxlife': {
+            'id': 7029,
+            'nome': 'FOX LIFE'
         }
     }
 }
