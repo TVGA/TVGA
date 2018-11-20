@@ -12,4 +12,4 @@ with open('/home/tvga/tvga/python/hash.json', 'w') as outfile:
 print(hash)
 
 os.system('mv /home/tvga/tvga/web/public/stream-*/ /home/tvga/tvga/web/public/stream-{}'.format(hash))
-os.system('pm2 update')
+os.system('sudo pm2 update')
