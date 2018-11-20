@@ -10,11 +10,17 @@ const helmet = require('helmet')
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+const rateLimit = require("express-rate-limit");
 
 let indexRouter = require('./routes/index');
 let adminApp = require('./admin/app')
 
 let app = express();
+
+const apiLimiter = rateLimit({
+    windowMs: 2 * 60 * 1000, // 15 minutes
+    max: 1
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(subdomain('admin', adminApp));
 app.use('/', indexRouter);
+app.use('/stream', apiLimiter);
 
 // Certificate
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/tvga.ml/privkey.pem', 'utf8');
