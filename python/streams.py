@@ -115,7 +115,7 @@ for grupo in canais:
             args = '--grupo {} --canal {} --username {} --password {}'.format(grupo, canal, logins[i]['username'], logins[i]['password'])
             pm2_json['apps'].append({
                 'name': canal,
-                'script': '../web/streams/stream.js',
+                'script': '/home/tvga/tvga/web/streams/stream.js',
                 'args': args
             })
             i += 1
@@ -126,5 +126,5 @@ with open('streams.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
 
 os.system('rm /home/tvga/tvga/web/public/stream-*/*')
-os.system('pm2 start streams.json')
+os.system('pm2 start /home/tvga/tvga/python/streams.json')
 os.system('pm2 update')
