@@ -9,5 +9,5 @@ xHash = [hash]
 with open('hash.json', 'w') as outfile:
     json.dump(xHash, outfile, indent=4)
 
-os.system('mv ../web/public/stream-*/ ../web/public/stream-{}'.format(hash))
+os.system('mv /home/tvga/tvga/web/public/stream-*/ /home/tvga/tvga/public/stream-{}'.format(hash))
 os.system('pm2 update')
