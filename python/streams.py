@@ -96,7 +96,7 @@ i = 0
 for grupo in canais:
     for canal in canais[grupo]:
         try:
-            args = '--canal {} --username {} --password {}'.format(canal, logins[i]['username'], logins[i]['password'])
+            args = '--grupo {} --canal {} --username {} --password {}'.format(grupo, canal, logins[i]['username'], logins[i]['password'])
             pm2_json['apps'].append({
                 'name': canal,
                 'script': '../web/streams/stream.js',

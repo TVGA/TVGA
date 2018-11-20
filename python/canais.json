@@ -23,7 +23,7 @@
     },
     "elevensports": {
         "elevensports1": {
-            "id": 29125,
+            "id": 29089,
             "nome": "ELEVEN SPORTS 1"
         },
         "elevensports2": {
@@ -48,14 +48,14 @@
         }
     },
     "benficatv": {
-        "benficatv1": {
-            "id": 3944,
+        "benficatv": {
+            "id": 7039,
             "nome": "BENFICA TV"
         }
     },
     "tvcine": {
         "tvcine1": {
-            "id": 3987,
+            "id": 7038,
             "nome": "TVCINE 1"
         },
         "tvcine2": {
@@ -69,6 +69,12 @@
         "tvcine4": {
             "id": 3990,
             "nome": "TVCINE 4"
+        }
+    },
+    "fox": {
+        "fox": {
+            "id": 7030,
+            "nome": "FOX"
         }
     }
 }
