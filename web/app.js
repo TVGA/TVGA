@@ -10,20 +10,11 @@ const helmet = require('helmet')
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-const rateLimit = require("express-rate-limit");
 
 let indexRouter = require('./routes/index');
 let adminApp = require('./admin/app')
 
 let app = express();
-
-const apiLimiter = rateLimit({
-    windowMs: 1 * 1 * 1000,
-    max: 1,
-    message:
-    "Too many accounts created from this IP, please try again after an hour"
-});
-app.use("/stream", apiLimiter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
