@@ -17,6 +17,14 @@ let adminApp = require('./admin/app')
 
 let app = express();
 
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 1,
+    message:
+    "Too many accounts created from this IP, please try again after an hour"
+});
+app.use("/stream", apiLimiter);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
