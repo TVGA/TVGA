@@ -15,7 +15,7 @@ router.get('/:canal', function(req, res, next) {
 });
 
 router.get('/stv1', function(req, res, next) {
-  res.redirect('/stream/sporttv1.m3u8');
+  res.redirect(301, '/stream/sporttv1.m3u8');
 });
 
 module.exports = router;
