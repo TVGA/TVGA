@@ -7,7 +7,7 @@ router.get('/:canal', function(req, res, next) {
   let grupo;
   for(grupo in canais) {if(canal.toLowerCase().includes(grupo)) break;}
   
-  res.download('/streams/' + grupo + '/' + canal, canal + '.m3u8');
+  res.download('./streams/' + grupo + '/' + canal, canal + '.m3u8');
 });
 
 module.exports = router;
