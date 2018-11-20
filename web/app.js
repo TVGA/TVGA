@@ -17,11 +17,6 @@ let adminApp = require('./admin/app')
 
 let app = express();
 
-const apiLimiter = rateLimit({
-    windowMs: 2 * 60 * 1000, // 15 minutes
-    max: 1
-});
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -34,7 +29,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(subdomain('admin', adminApp));
 app.use('/', indexRouter);
-app.use(apiLimiter);
 
 // Certificate
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/tvga.ml/privkey.pem', 'utf8');
