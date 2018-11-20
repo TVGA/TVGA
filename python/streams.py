@@ -54,7 +54,7 @@ canais = {
         }
     },
     'benficatv': {
-        'benficatv1': {
+        'benficatv': {
             'id': 7039,
             'nome': 'BENFICA TV'
         }
@@ -75,6 +75,12 @@ canais = {
         'tvcine4': {
             'id': 3990,
             'nome': 'TVCINE 4'
+        }
+    },
+    'fox': {
+        'fox': {
+            'id': 7030,
+            'nome': 'FOX'
         }
     }
 }
