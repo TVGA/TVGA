@@ -10,4 +10,4 @@ with open('hash.json', 'w') as outfile:
     json.dump(xHash, outfile, indent=4)
 
 os.system('mv /home/tvga/tvga/web/public/stream-*/ /home/tvga/tvga/web/public/stream-{}'.format(hash))
-os.system('pm2 update')
+os.system('python3 /home/tvga/tvga/python/streams.py')
