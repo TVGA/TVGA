@@ -18,7 +18,7 @@ let adminApp = require('./admin/app')
 let app = express();
 
 const apiLimiter = rateLimit({
-    windowMs: 1 * 4 * 1000,
+    windowMs: 1 * 1 * 1000,
     max: 1,
     message:
     "Too many accounts created from this IP, please try again after an hour"
