@@ -108,10 +108,8 @@ pm2_json = {
     'apps': []
 }
 
-os.system('pm2 stop all')
 i = 0
 for grupo in canais:
-    os.system('mkdir ../web/streams/{}'.format(grupo))
     for canal in canais[grupo]:
         try:
             args = '--grupo {} --canal {} --username {} --password {}'.format(grupo, canal, logins[i]['username'], logins[i]['password'])
@@ -120,8 +118,6 @@ for grupo in canais:
                 'script': '../web/streams/stream.js',
                 'args': args
             })
-            os.system('mkdir ../web/streams/{}/{}'.format(grupo, canal))
-            os.system('rm ../web/streams/{}/{}/*'.format(grupo, canal))
             i += 1
         except:
             break
@@ -129,5 +125,6 @@ for grupo in canais:
 with open('streams.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
 
+os.system('rm ../web/public/stream/*')
 os.system('pm2 start streams.json')
 os.system('pm2 update')
