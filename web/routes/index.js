@@ -12,7 +12,7 @@ router.get('/:canal', function(req, res, next) {
   let grupo;
   for(grupo in canais) {if(canal.toLowerCase().includes(grupo)) break;}
   
-  res.render('stream', { title: 'TVGA > ' + canais[grupo][canal]['nome'], file: '/stream-' + hash[0] + '/' + canal + '.m3u8' });
+  res.render('stream', { title: 'TVGA > ' + canais[grupo][canal]['nome'], file: '/stream/' + canal + '.m3u8' });
 });
 
 module.exports = router;

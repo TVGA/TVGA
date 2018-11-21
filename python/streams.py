@@ -125,6 +125,6 @@ for grupo in canais:
 with open('streams.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
 
-os.system('rm ../web/public/stream-*/*')
+os.system('rm ../web/public/stream/*')
 os.system('pm2 start streams.json')
 os.system('pm2 update')
