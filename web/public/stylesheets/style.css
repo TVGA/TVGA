@@ -219,7 +219,7 @@ video {
 }
 
 #canaisSide {
-    background: #0d0f14bd;
+    background: #0d0f14b4;
     position: relative;
     z-index: 0;
     height: calc(100vh - 200px);
