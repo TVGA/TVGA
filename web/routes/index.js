@@ -11,7 +11,7 @@ router.get('/:canal', function(req, res, next) {
   let grupo;
   for(grupo in canais) {if(canal.toLowerCase().includes(grupo)) break;}
   
-  res.render('stream', { file: '/stream/' + canal + '.m3u8', sideCanais: canais });
+  res.render('stream', { file: '/stream/' + canal + '.m3u8', canais: canais });
 });
 
 module.exports = router;
