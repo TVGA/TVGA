@@ -33,12 +33,18 @@
         $('#playerDiv').css({ top: $('#canaisSide').position().top, height: $('#canaisSide').height() });
 
         var justHidden = false;
+        var show = false;
         var j;
 
         function hide() {
             $('html').css({
                 cursor: 'none'
             });
+            if($(window).width() > 1280 && open) {
+                var cw = -1 * $('#canaisSide').width() - 10;
+                $('#canaisSide').animate({ left: cw + 'px' }, 600);
+                show = true;
+            } 
             justHidden = true;
             setTimeout(function() {
                 justHidden = false;
@@ -47,11 +53,14 @@
             $(document).mousemove(function() {
             if (!justHidden) {
                 justHidden = false;
-                console.log('move');
                 clearTimeout(j);
                 $('html').css({
-                cursor: 'default'
+                    cursor: 'default'
                 });
+                if(show) {
+                    $('#canaisSide').animate({ left: '0' }, 600);
+                    show = false;
+                }
                 j = setTimeout(hide, 2000);
             }
         });
