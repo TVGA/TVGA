@@ -108,19 +108,23 @@ pm2_json = {
     'apps': []
 }
 
-i = 0
-for grupo in canais:
-    for canal in canais[grupo]:
-        try:
-            args = '--grupo {} --canal {} --username {} --password {}'.format(grupo, canal, logins[i]['username'], logins[i]['password'])
-            pm2_json['apps'].append({
-                'name': canal,
-                'script': '../web/streams/stream.js',
-                'args': args
-            })
-            i += 1
-        except:
-            break
+with open('../web/public/stream/tvga.m3u', 'w') as f:
+    f.write('#EXTM3U')
+    i = 0
+    for grupo in canais:
+        for canal in canais[grupo]:
+            f.write('#EXTINF:0,{}'.format(canais[grupo][canal]['nome']))
+            f.write('/stream/{}.m3u8'.format(canal))
+            try:
+                args = '--grupo {} --canal {} --username {} --password {}'.format(grupo, canal, logins[i]['username'], logins[i]['password'])
+                pm2_json['apps'].append({
+                    'name': canal,
+                    'script': '../web/streams/stream.js',
+                    'args': args
+                })
+                i += 1
+            except:
+                break
 
 with open('streams.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
