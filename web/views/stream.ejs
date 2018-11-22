@@ -55,6 +55,10 @@
                 j = setTimeout(hide, 2000);
             }
         });
+
+        $('#canaisSide').animate({
+            scrollTop: $('a[href="<%= canal%>"]').offset().top - 120
+        }, 1000);
     });
 
     var open = false;
