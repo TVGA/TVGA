@@ -115,8 +115,8 @@ with open('../web/public/stream/tvga.m3u', 'w') as f:
     i = 0
     for grupo in canais:
         for canal in canais[grupo]:
-            f.write('\n#EXTINF:0,{}'.format(canais[grupo][canal]['nome']))
-            f.write('\n/stream/{}.m3u8'.format(canal))
+            f.write('\n#EXTINF:-1 tvg-ID="" tvg-name="{}" tvg-logo="https://tvga.ml/images/canais/{}.png",{}'.format(canais[grupo][canal]['nome'], canal, canais[grupo][canal]['nome']))
+            f.write('\nhttps://tvga.ml/stream/{}.m3u8'.format(canal))
             try:
                 args = '--grupo {} --canal {} --username {} --password {}'.format(grupo, canal, logins[i]['username'], logins[i]['password'])
                 pm2_json['apps'].append({
