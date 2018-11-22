@@ -108,6 +108,8 @@ pm2_json = {
     'apps': []
 }
 
+os.system('rm ../web/public/stream/*')
+
 with open('../web/public/stream/tvga.m3u', 'w') as f:
     f.write('#EXTM3U')
     i = 0
@@ -129,6 +131,5 @@ with open('../web/public/stream/tvga.m3u', 'w') as f:
 with open('streams.json', 'w') as outfile:
     json.dump(pm2_json, outfile, indent=4)
 
-os.system('rm ../web/public/stream/*')
 os.system('pm2 start streams.json')
 os.system('pm2 update')
