@@ -31,6 +31,30 @@
         var h = $(window).height() - (hh + fh);
         $('#canaisSide').css({ height: h + 'px' });
         $('#playerDiv').css({ top: $('#canaisSide').position().top, height: $('#canaisSide').height() });
+
+        var justHidden = false;
+        var j;
+
+        function hide() {
+            $('html').css({
+                cursor: 'none'
+            });
+            justHidden = true;
+            setTimeout(function() {
+                justHidden = false;
+            }, 500);
+            }
+            $(document).mousemove(function() {
+            if (!justHidden) {
+                justHidden = false;
+                console.log('move');
+                clearTimeout(j);
+                $('html').css({
+                cursor: 'default'
+                });
+                j = setTimeout(hide, 2000);
+            }
+        });
     });
 
     var open = false;
