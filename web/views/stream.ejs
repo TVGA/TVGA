@@ -1,8 +1,17 @@
 <div id="canaisSide">
-
+    <div class="canaisSide"><i class="fas fa-times"></i></div>
+    <ul class="sideC">
+    <% for(let grupo in canais) { %>
+        <% for(let canal in canais[grupo]) { %>
+            <li class="hvr-bob">
+                <a href="<%= canal %>"><div style="background: url('images/canais/<%= canal %>.png') no-repeat center; background-size: cover;"></div></a>
+            </li>
+        <% } %>
+    <% } %>
+    </ul>
 </div>
 
-<div style="margin: 10vw 30vw; position: absolute; top: 10vw;">
+<div id="playerDiv" style="position: absolute;">
     <video id=player width=600 height=300 class="video-js vjs-default-skin" controls preload="auto">
         <source src="<%= file %>" type="application/x-mpegURL">
     </video>
@@ -11,5 +20,67 @@
 <script>
     var player = videojs('#player', {
         autoplay: true
+    });
+</script>
+
+<script>
+    $(function() {
+        var cw = -1 * $('#canaisSide').width() - 10;
+        var hh = $('header').height() + 20;
+        var fh = $('footer').height();
+        var h = $(window).height() - (hh + fh);
+        $('#canaisSide').css({ height: h + 'px' });
+        $('#playerDiv').css({ top: $('#canaisSide').position().top, height: $('#canaisSide').height() });
+    });
+
+    var open = false;
+
+    if($(window).width() < 1280) {
+        $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '/#canais');
+        $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '/#canais');
+    }
+
+    $(document).on('click', 'a[href="#canais"]', function (event) {
+        event.preventDefault();
+        
+        if($('#canaisSide').position().left != 0) {
+            open = true;
+            $('#canaisSide').animate({ left: '0' }, 600);
+        } else {
+            open = false;
+            var cw = -1 * $('#canaisSide').width() - 10;
+            $('#canaisSide').animate({ left: cw + 'px' }, 600);
+        }
+    });
+
+    $(document).on('click', '.canaisSide', function (event) {
+        event.preventDefault();
+        open = false;
+        var cw = -1 * $('#canaisSide').width() - 10
+        $('#canaisSide').animate({ left: cw + 'px' }, 600);
+    });
+
+    $(window).resize(function() {
+        var cw = -1 * $('#canaisSide').width() - 10;
+        var hh = $('header').height() + 20;
+        var fh = $('footer').height();
+        var h = $(window).height() - (hh + fh);
+        $('#canaisSide').css({ height: h + 'px' });
+        $('#playerDiv').css({ top: $('#canaisSide').position().top, height: $('#canaisSide').height() });
+
+        if($(window).width() < 1280) {
+            $('#canaisSide').css({ left: cw + 'px' });
+            $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '/#canais');
+            $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '/#canais');
+        } else {
+            if(open) {
+                $('#canaisSide').css({ left: '0' });
+            } else {
+                var cw = -1 * $('#canaisSide').width() - 10;
+                $('#canaisSide').css({ left: cw + 'px' });
+            }
+            $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '#canais');
+            $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '#canais');
+        }
     });
 </script>
