@@ -249,17 +249,21 @@ video {
 }
 
 .sideC {
+    overflow: auto; 
+}
+
+.sideC > ul {
     list-style: none;
     padding: 0;
     margin: 0 0 1vw 0;
 }
 
-.sideC > li {
+.sideC > ul >  li {
     width: 100%;
     text-align: center;
 }
 
-.sideC > li > a > div {
+.sideC > ul > li > a > div {
     width: 85%;
     height: 5vw;
     margin: auto;

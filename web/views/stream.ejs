@@ -1,7 +1,7 @@
 <div id="canaisSide">
     <div class="canaisSide"><i class="fas fa-times"></i></div>
-    <div style="overflow: auto; height: 678px;">
-        <ul class="sideC">
+    <div class="sideC">
+        <ul>
         <% for(let grupo in canais) { %>
             <% for(let canal in canais[grupo]) { %>
                 <li>
@@ -33,6 +33,8 @@
         var h = $(window).height() - (hh + fh);
         $('#canaisSide').css({ height: h + 'px' });
         $('#playerDiv').css({ top: $('#canaisSide').position().top, height: $('#canaisSide').height() });
+
+        $('.sideC').css({ height: $('#canaisSide').height() - 40 });
 
         var justHidden = false;
         var show = false;
@@ -107,6 +109,8 @@
         var h = $(window).height() - (hh + fh);
         $('#canaisSide').css({ height: h + 'px' });
         $('#playerDiv').css({ top: $('#canaisSide').position().top, height: $('#canaisSide').height() });
+
+        $('.sideC').css({ height: $('#canaisSide').height() - 40 });
 
         if($(window).width() < 1280) {
             $('#canaisSide').css({ left: cw + 'px' });
