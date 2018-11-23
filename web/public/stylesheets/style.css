@@ -730,3 +730,42 @@ video {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
   }
+
+  @-webkit-keyframes hvr-pulse-low {
+    25% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    75% {
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+  }
+  @keyframes hvr-pulse-low {
+    25% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    75% {
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+  }
+  .hvr-pulse-low {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  
+  .canalSelecionado {
+    -webkit-animation-name: hvr-pulse-low;
+    animation-name: hvr-pulse-low;
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }

@@ -3,7 +3,7 @@
     <ul class="sideC">
     <% for(let grupo in canais) { %>
         <% for(let canal in canais[grupo]) { %>
-            <li class="hvr-bob">
+            <li>
                 <a href="<%= canal %>"><div style="background: url('images/canais/<%= canal %>.png') no-repeat center; background-size: cover;"></div></a>
             </li>
         <% } %>
@@ -61,13 +61,14 @@
                     $('#canaisSide').animate({ left: '0' }, 600);
                     show = false;
                 }
-                j = setTimeout(hide, 2000);
+                j = setTimeout(hide, 6000);
             }
         });
 
         $('#canaisSide').animate({
             scrollTop: $('a[href="<%= canal%>"]').offset().top - 120
         }, 1000);
+        $('a[href="<%= canal%>"]').parent().addClass('canalSelecionado');
     });
 
     var open = false;
