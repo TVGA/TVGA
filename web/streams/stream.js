@@ -15,7 +15,7 @@ let password = grab('--password')
 if(grupo && canal && username && password) {
     let url = 'http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + canais[grupo][canal]['id'] + '.ts';
 
-    let command = 'ffmpeg -i ' + url + ' -c:v copy -hls_time 2 -hls_list_size 2 -hls_flags delete_segments -f hls ../web/public/stream/' + canal + '.m3u8';
+    let command = 'ffmpeg -i ' + url + ' -c:v copy -hls_time 2 -hls_list_size 2 -hls_flags delete_segments -f hls ../web/public/stream/' + canal + '.m3u';
 
     let dataCallback = function(data) {
         console.log(data);
