@@ -7,23 +7,23 @@ with open('logins.json', 'r') as fp:
 canais = {
     'sporttv': {
         'sporttv1': {
-            'id': 160,
+            'id': 7049,
             'nome': 'SPORT TV 1'
         },
         'sporttv2': {
-            'id': 3993,
+            'id': 7043,
             'nome': 'SPORT TV 2'
         },
         'sporttv3': {
-            'id': 16736,
+            'id': 7042,
             'nome': 'SPORT TV 3'
         },
         'sporttv4': {
-            'id': 2495,
+            'id': 7041,
             'nome': 'SPORT TV 4'
         },
         'sporttv5': {
-            'id': 2496,
+            'id': 7040,
             'nome': 'SPORT TV 5'
         }
     },
@@ -65,7 +65,7 @@ canais = {
             'nome': 'TVCINE 1'
         },
         'tvcine2': {
-            'id': 3988,
+            'id': 7037,
             'nome': 'TVCINE 2'
         },
         'tvcine3': {
@@ -73,7 +73,7 @@ canais = {
             'nome': 'TVCINE 3'
         },
         'tvcine4': {
-            'id': 3990,
+            'id': 7035,
             'nome': 'TVCINE 4'
         }
     },
