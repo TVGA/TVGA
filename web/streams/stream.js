@@ -13,7 +13,7 @@ let username = grab('--username');
 let password = grab('--password')
 
 if(grupo && canal && username && password) {
-    let url = 'http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + canais[grupo][canal]['id'];
+    let url = 'http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + canais[grupo][canal]['id'] + '.ts';
 
     let command = 'ffmpeg -i ' + url + ' -c:v copy -hls_time 10 -hls_list_size 5 -hls_flags delete_segments -f hls ../web/public/stream/' + canal + '.m3u8';
 
