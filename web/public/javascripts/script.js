@@ -60,7 +60,7 @@ $(document).ready(function(){
         $(this).toggleClass('open');
         if($('#nav-menu').css('display') == 'none') {
             $('#nav-menu').slideDown(600);
-                
+            $('.slider').animate({ marginTop: '70vw' }, 600);    
             $('#slider').animate({ margin: '90vw auto 15vw auto'}, 600)
         } else {
             $('#nav-menu').slideUp(600);
