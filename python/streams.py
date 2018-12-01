@@ -55,7 +55,7 @@ canais = {
     },
     'benficatv': {
         'benficatv': {
-            'id': 3944,
+            'id': 7039,
             'nome': 'BENFICA TV'
         }
     },
