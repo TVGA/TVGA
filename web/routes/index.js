@@ -6,12 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'TVGA', canais: canais});
 });
 
-router.get('/:canal', function(req, res, next) {
-  let canal = req.params.canal;
-  let grupo;
-  for(grupo in canais) {if(canal.toLowerCase().includes(grupo)) break;}
-  
-  res.render('stream', { file: '/stream/' + canal + '.m3u8', canais: canais, canal: canal });
-});
+for(let grupo in canais) {
+  for(let canal in canais[grupo]) {
+    router.get('/' + canal , function(req, res, next) {
+      res.render('stream', { file: '/stream/' + canal + '.m3u8', canais: canais, canal: canal });
+    });
+  }
+}
 
 module.exports = router;
