@@ -32,6 +32,50 @@
 </head>
 <body style="visibility: hidden !important;">
   <div id="babasbmsgx" style="visibility: visible !important;">Por favor, desabilite o seu adblock e script blocker para visualizar esta página</div>
+  <div id="registarArea">
+    <div class="form">
+        <form action="" method="post">
+          <h1>Registo</h1>
+          <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Nome de Utilizador" name="username" required>
+          </div>
+          <div class="input-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" name="email" required>
+          </div>
+          <div class="input-wrapper">
+              <i class="fas fa-key"></i>
+              <input type="password" placeholder="Palavra-chave" name="password" required>
+          </div>
+          <div class="input-wrapper">
+              <i class="fas fa-key"></i>
+              <input type="password" placeholder="Repetir Palavra-chave" name="repeat-password" required>
+          </div>
+          <div class="input-wrapper">
+            <i class="fas fa-ticket-alt"></i>
+            <input type="text" placeholder="Código de Referência" name="referral-code">
+          </div>
+          <input type="submit" value="Criar conta">
+        </form>
+    </div>
+  </div>
+  <div id="entrarArea">
+      <div class="form">
+          <form action="" method="post">
+            <h1>Entrar</h1>
+            <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Nome de Utilizador" name="username" required>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-key"></i>
+                <input type="password" placeholder="Palavra-chave" name="password" required>
+            </div>
+            <input type="submit" value="Entrar">
+          </form>
+      </div>
+    </div>
   <a id="top"></a>
   <%- include('partials/header') %>
   <%- body %>

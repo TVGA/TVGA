@@ -68,6 +68,21 @@ $(document).ready(function(){
             $('#slider').animate({ margin: '20vw auto 8vw auto'}, 600)
         }                 
     });
+
+    $('#nav-menu > ul > li > a').click(function(){
+        $('#nav-icon').click();               
+    });
+});
+
+$(document).mouseup(function(e) 
+{
+    var container = $('.form');
+
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        $('#registarArea').hide();
+        $('#entrarArea').hide();
+    }
 });
 
 $(window).resize(function() {
@@ -96,3 +111,11 @@ $(window).resize(function() {
     
     $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 });
+
+function registar() {
+    $('#registarArea').show();
+}
+
+function entrar() {
+    $('#entrarArea').show();
+}
