@@ -19,4 +19,8 @@ for(let grupo in canais) {
   }
 }
 
+router.get('/stv1', function(req, res, next) {
+  res.redirect('https://tvga.ml/' + hash + '/sporttv1.m3u8');
+});
+
 module.exports = router;
