@@ -123,7 +123,7 @@ with open('../web/public/stream/tvga.m3u', 'w') as f:
                     'name': canal,
                     'script': '../web/streams/stream.js',
                     'args': args,
-                    'max_restarts': 10
+                    'restart_delay': 600000
                 })
                 i += 1
             except:
