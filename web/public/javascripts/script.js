@@ -102,6 +102,12 @@ $(window).resize(function() {
         $('#slider').css('margin', '10vw auto 3vw auto');
     }
 
+    var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+    $('#registarArea > .form').css('top', centerForm + 'px');
+
+    var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+    $('#entrarArea > .form').css('top', centerForm + 'px');
+
     slideCount = $('#slider ul li').length;
     slideWidth = $('#slider ul li').width();
     slideHeight = $('#slider ul li').height();
@@ -114,8 +120,12 @@ $(window).resize(function() {
 
 function registar() {
     $('#registarArea').show();
+    var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+    $('#registarArea > .form').css('top', centerForm + 'px');
 }
 
 function entrar() {
     $('#entrarArea').show();
+    var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+    $('#entrarArea > .form').css('top', centerForm + 'px');
 }

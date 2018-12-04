@@ -23,9 +23,35 @@
     var player = videojs('#player', {
         autoplay: true
     });
-</script>
 
-<script>
+    function hed() {
+        var vWidth = $('#playerDiv').width();
+        var vHeight = (9 * vWidth) / 16;
+        if(vHeight > $('#playerDiv').height()) {
+            weh();
+        } else {
+            var vTop = ($('#playerDiv').height() - vHeight) / 2;
+            $('#player_html5_api').height(vHeight);
+            $('#player_html5_api').width(vWidth);
+            $('#player_html5_api').css('left', '0');
+            $('#player_html5_api').css('top', vTop + 'px');
+        }
+    }
+
+    function weh() {
+        var vHeight = $('#playerDiv').height();
+        var vWidth = (16 * vHeight) / 9;
+        if(vWidth > $('#playerDiv').width()) {
+            hed();
+        } else {
+            var vLeft = ($('#playerDiv').width() - vWidth) / 2;
+            $('#player_html5_api').height(vHeight);
+            $('#player_html5_api').width(vWidth);
+            $('#player_html5_api').css('left', vLeft + 'px');
+            $('#player_html5_api').css('top', '0');
+        }
+    }
+
     $(function() {
         var cw = -1 * $('#canaisSide').width() - 10;
         var hh = $('header').height() + 20;
@@ -73,6 +99,12 @@
             scrollTop: $('a[href="<%= canal%>"]').offset().top - 168
         }, 1000);
         $('a[href="<%= canal%>"]').parent().addClass('canalSelecionado');
+
+        if ($('#playerDiv').width() > $('#playerDiv').height()) {
+            weh();
+        } else {
+            hed();
+        }
     });
 
     var open = false;
@@ -125,6 +157,35 @@
             }
             $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '#canais');
             $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '#canais');
+        }
+        
+        if ($('#playerDiv').width() > $('#playerDiv').height()) {
+            weh();
+        } else {
+            hed();
+        }
+
+        if(player.isFullscreen()) {
+            $('#player_html5_api').css('left', '0');
+            $('#player_html5_api').css('top', '0');
+            $('#player_html5_api').width('100%');
+            $('#player_html5_api').height('100%');
+        }
+    });
+
+    $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e)    
+    {
+        if (!window.screenTop && !window.screenY) {
+            if ($('#playerDiv').width() > $('#playerDiv').height()) {
+                weh();
+            } else {
+                hed();
+            }
+        } else {
+            $('#player_html5_api').css('left', '0');
+            $('#player_html5_api').css('top', '0');
+            $('#player_html5_api').width('100%');
+            $('#player_html5_api').height('100%');
         }
     });
 </script>
