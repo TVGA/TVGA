@@ -103,13 +103,11 @@ nav ul li a {
 .slider {
     position: absolute;
     height: 43vw;
-    width: 105%;
     -webkit-filter: blur(25px);
     -moz-filter: blur(25px);
     -o-filter: blur(25px);
     -ms-filter: blur(25px);
     filter: blur(25px);
-    margin-left: -5%;
 }
 
 #slider {
