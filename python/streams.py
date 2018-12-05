@@ -13,23 +13,23 @@ with open('logins.json', 'r') as fp:
 canais = {
     'sporttv': {
         'sporttv1': {
-            'id': 7049,
+            'id': [7049, 16742, 16741, 16740, 3992, 160],
             'nome': 'SPORT TV 1'
         },
         'sporttv2': {
-            'id': 7043,
+            'id': [7043, 16739, 16738, 159, 3993],
             'nome': 'SPORT TV 2'
         },
         'sporttv3': {
-            'id': 7042,
+            'id': [7042, 16737, 16736, 158, 3994],
             'nome': 'SPORT TV 3'
         },
         'sporttv4': {
-            'id': 7041,
+            'id': [7041, 16735, 16734, 2495, 3995],
             'nome': 'SPORT TV 4'
         },
         'sporttv5': {
-            'id': 7040,
+            'id': [7040, 16733, 16732, 2496, 3997],
             'nome': 'SPORT TV 5'
         }
     },
@@ -116,7 +116,7 @@ pm2_json = {
 
 os.system('rm ../web/public/{}/*'.format(lastHash))
 
-with open('../web/public/{}/tvga.m3u'.format(lastHash), 'w') as f:
+with open('../web/public/lista/tvga.m3u'.format(lastHash), 'w') as f:
     f.write('#EXTM3U')
     i = 0
     for grupo in canais:
