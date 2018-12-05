@@ -15,6 +15,7 @@
     "express": "^4.16.4",
     "express-ejs-layouts": "^2.5.0",
     "express-subdomain": "^1.0.5",
+    "fluent-ffmpeg": "^2.1.2",
     "helmet": "^3.14.0",
     "morgan": "^1.9.1",
     "node-run-cmd": "^1.0.1"
