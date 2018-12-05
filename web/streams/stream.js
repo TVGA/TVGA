@@ -36,7 +36,7 @@ if(grupo && canal && username && password) {
 
     var checkDict = setInterval(function(){
         if(Object.keys(dict).length == streams.length) {
-            console.log(dict);
+            clearInterval(checkDict);
             let stream = Object.keys(dict).reduce((a, b) => dict[a] >= dict[b] ? a : b);
             let url = 'http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + stream + '.ts';
 
@@ -49,9 +49,7 @@ if(grupo && canal && username && password) {
             let options = { onData: dataCallback, verbose: true };
 
             nrc.run(command, options);
-            clearInterval(checkDict);
         }
-        process.stdout.write('.');
     }, 325)
 } else {
     console.log('Erro');
