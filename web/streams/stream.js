@@ -18,8 +18,10 @@ if(grupo && canal && username && password) {
 
     var dict = {};
 
-    streams.forEach(id => {
-        ffmpeg.ffprobe('http://bestbuyiptv.link:6969/live/i.m.th.ebe.stfc.kth.erest@gmail.com/fputr7x8yH/' + id + '.ts',function(err, metadata) {
+    for (let i = 0; i < streams.length; i++) {
+        const id = streams[i];
+        
+        ffmpeg.ffprobe('http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + id + '.ts',function(err, metadata) {
 
             var videoQuality = metadata['streams'][0]['height'];
             var checkAudio = metadata['streams'][1]['channel_layout'];
@@ -30,12 +32,12 @@ if(grupo && canal && username && password) {
 
             dict[id] = videoQuality;
         });
-    });
+    }
 
     var checkDict = setInterval(function(){
         if(Object.keys(dict).length == streams.length) {
             console.log(dict);
-            stream = Object.keys(dict).reduce((a, b) => dict[a] >= dict[b] ? a : b);
+            let stream = Object.keys(dict).reduce((a, b) => dict[a] >= dict[b] ? a : b);
             let url = 'http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + stream + '.ts';
 
             let command = 'ffmpeg -i ' + url + ' -c:v copy -hls_time 10 -hls_list_size 5 -hls_flags delete_segments -f hls ../web/public/' + hash + '/' + canal + '.m3u8';
