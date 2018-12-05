@@ -101,7 +101,7 @@ canais = {
             'nome': 'FOX CRIME'
         },
         'foxmovies': {
-            'id': [7726, 3996, 4303],
+            'id': [7726, 3996],
             'nome': 'FOX MOVIES'
         }
     }
