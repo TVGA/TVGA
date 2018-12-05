@@ -61,47 +61,47 @@ canais = {
     },
     'benficatv': {
         'benficatv': {
-            'id': 7039,
+            'id': [7039, 16731, 3944],
             'nome': 'BENFICA TV'
         }
     },
     'tvcine': {
         'tvcine1': {
-            'id': 7038,
+            'id': [7038, 3987],
             'nome': 'TVCINE 1'
         },
         'tvcine2': {
-            'id': 7037,
+            'id': [7037, 3988],
             'nome': 'TVCINE 2'
         },
         'tvcine3': {
-            'id': 7036,
+            'id': [7036, 3989],
             'nome': 'TVCINE 3'
         },
         'tvcine4': {
-            'id': 7035,
+            'id': [7035, 3990],
             'nome': 'TVCINE 4'
         }
     },
     'fox': {
         'fox': {
-            'id': 7030,
+            'id': [7030, 3938],
             'nome': 'FOX'
         },
         'foxlife': {
-            'id': 7029,
+            'id': [7029, 3939],
             'nome': 'FOX LIFE'
         },
         'foxcomedy': {
-            'id': 7027,
+            'id': [7027, 3965],
             'nome': 'FOX COMEDY'
         },
         'foxcrime': {
-            'id': 7028,
+            'id': [7028, 3940],
             'nome': 'FOX CRIME'
         },
         'foxmovies': {
-            'id': 7726,
+            'id': [7726, 3996, 4303],
             'nome': 'FOX MOVIES'
         }
     }
@@ -116,7 +116,7 @@ pm2_json = {
 
 os.system('rm ../web/public/{}/*'.format(lastHash))
 
-with open('../web/public/lista/tvga.m3u'.format(lastHash), 'w') as f:
+with open('../web/public/lista/tvga.m3u', 'w') as f:
     f.write('#EXTM3U')
     i = 0
     for grupo in canais:
@@ -128,8 +128,7 @@ with open('../web/public/lista/tvga.m3u'.format(lastHash), 'w') as f:
                 pm2_json['apps'].append({
                     'name': canal,
                     'script': '../web/streams/stream.js',
-                    'args': args,
-                    'restart_delay': 600000
+                    'args': args
                 })
                 i += 1
             except:
