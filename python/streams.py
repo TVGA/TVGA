@@ -35,27 +35,27 @@ canais = {
     },
     'elevensports': {
         'elevensports1': {
-            'id': 29089,
+            'id': [29089, 29125],
             'nome': 'ELEVEN SPORTS 1'
         },
         'elevensports2': {
-            'id': 29088,
+            'id': [29088, 29124],
             'nome': 'ELEVEN SPORTS 2'
         },
         'elevensports3': {
-            'id': 29087,
+            'id': [29087, 29123],
             'nome': 'ELEVEN SPORTS 3'
         },
         'elevensports4': {
-            'id': 29086,
+            'id': [29086, 29122],
             'nome': 'ELEVEN SPORTS 4'
         },
         'elevensports5': {
-            'id': 29085,
+            'id': [29085, 29121],
             'nome': 'ELEVEN SPORTS 5'
         },
         'elevensports6': {
-            'id': 29084,
+            'id': [29084, 29120],
             'nome': 'ELEVEN SPORTS 6'
         }
     },
