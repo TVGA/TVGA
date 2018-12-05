@@ -24,7 +24,7 @@ if(grupo && canal && username && password) {
         ffmpeg.ffprobe('http://bestbuyiptv.link:6969/live/' + username + '/' + password + '/' + id + '.ts',function(err, metadata) {
             var videoQuality = 0;
 
-            if (metadata == null){
+            if (metadata != null){
                 videoQuality = metadata['streams'][0]['height'];
                 var checkAudio = metadata['streams'][1]['channel_layout'];
 
