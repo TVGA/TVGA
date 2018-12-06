@@ -128,7 +128,9 @@ with open('../web/public/lista/tvga.m3u', 'w') as f:
                 pm2_json['apps'].append({
                     'name': canal,
                     'script': '../web/streams/stream.js',
-                    'args': args
+                    'args': args,
+                    'restart_delay': 60000,
+                    'max_restarts': 10
                 })
                 i += 1
             except:
