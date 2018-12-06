@@ -363,6 +363,15 @@ button:focus {
     outline: none;
 }
 
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+    -webkit-appearance: none;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
