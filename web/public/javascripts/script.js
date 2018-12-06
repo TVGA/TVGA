@@ -69,7 +69,9 @@ $(document).ready(function(){
         }                 
     });
 
-    
+    $('#nav-menu > ul > li > a').click(function(){
+        $('#nav-icon').click();               
+    });
 });
 
 $(document).mouseup(function(e) 
