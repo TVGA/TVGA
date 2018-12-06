@@ -339,10 +339,6 @@ video {
     height: 100%;
 }
 
-.input-wrapper > div > i {
-    margin-top: calc((100% - 1.8em) / 2);
-}
-
 .form > form > input[type=submit] {
     background-color: #dcc168;
     color: #ffffff;
