@@ -27,6 +27,11 @@ if(grupo && canal && username && password) {
             try {
                 videoQuality = metadata['streams'][0]['height'];
                 var checkAudio = metadata['streams'][1]['channel_layout'];
+                var checkVideoProfile = metadata['streams'][0]['profile'];
+
+                if(checkVideoProfile != 'High') {
+                    videoQuality = videoQuality + 1;
+                }
 
                 if(checkAudio == 'unknown') {
                     videoQuality = 0;
