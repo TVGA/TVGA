@@ -324,7 +324,7 @@ video {
     margin-bottom: 20px;
 }
  
-.input-wrapper > i {
+.input-wrapper > div {
     background: #dcc168;
     text-decoration: inherit;
     color: #0d0f14;
