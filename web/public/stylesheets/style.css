@@ -337,8 +337,10 @@ video {
     border-radius: 10px 0 0 10px;
     width: 28px;
     height: 100%;
-    vertical-align: middle;
-    line-height: 40px;
+}
+
+.input-wrapper > div > i {
+    margin-top: calc((100% - 1.8em) / 2);
 }
 
 .form > form > input[type=submit] {
