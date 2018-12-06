@@ -72,6 +72,11 @@ $(document).ready(function(){
     $('#nav-menu > ul > li > a').click(function(){
         $('#nav-icon').click();               
     });
+
+    $('.form > i').click(function(){
+        $('#registarArea').hide();
+        $('#entrarArea').hide();              
+    });
 });
 
 $(document).mouseup(function(e) 

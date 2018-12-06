@@ -299,6 +299,14 @@ video {
     color: #ffffff;
 }
 
+.form > i {
+    position: absolute;
+    font-size: 1.8em;
+    right: 13px;
+    top: 6px;
+    cursor: pointer;
+}
+
 .form > form {
     padding: 30px 3vw;
 }
@@ -660,8 +668,12 @@ input[type="submit"],
     }
 
     .form {
-        width: 75vw;
-        left: 12.5%;
+        width: 95vw;
+        left: 2.5%; 
+    }
+
+    .form > form > div > input {
+        font-size: 1.2em;
     }
 }
 
