@@ -129,7 +129,7 @@ with open('../web/public/lista/tvga.m3u', 'w') as f:
                     'name': canal,
                     'script': '../web/streams/stream.js',
                     'args': args,
-                    'restart_delay': 60000,
+                    'restart_delay': 12000,
                     'max_restarts': 10
                 })
                 i += 1
