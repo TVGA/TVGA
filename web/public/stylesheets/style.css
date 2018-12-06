@@ -325,7 +325,7 @@ video {
 }
  
 .input-wrapper > i {
-    background: #dcc168;
+    /* background: #dcc168;
     text-decoration: inherit;
     color: #0d0f14;
     font-size: 1.8em;
@@ -337,7 +337,20 @@ video {
     border-right: 1px solid #0d0f14;
     border-radius: 10px 0 0 10px;
     width: 28px;
-    height: 28px;
+    height: 28px; */
+    background: #dcc168;
+    text-decoration: inherit;
+    color: #0d0f14;
+    font-size: 1.8em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2px 12px 0px 12px;
+    vertical-align: baseline;
+    border-right: 1px solid #0d0f14;
+    border-radius: 10px 0 0 10px;
+    width: 28px;
+    height: 40px;
 }
 
 .form > form > input[type=submit] {
