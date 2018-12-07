@@ -5,7 +5,7 @@ let sliderUlWidth = slideCount * slideWidth;
 
 $('#slider').css({ width: slideWidth, height: slideHeight });
 
-// $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 
 $('#slider ul li:last-child').prependTo('#slider ul');
 
@@ -79,16 +79,16 @@ $(document).ready(function(){
     });
 });
 
-// $(document).mouseup(function(e) 
-// {
-//     var container = $('.form');
+$(document).mouseup(function(e) 
+{
+    var container = $('.form');
 
-//     if (!container.is(e.target) && container.has(e.target).length === 0) 
-//     {
-//         $('#registarArea').hide();
-//         $('#entrarArea').hide();
-//     }
-// });
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        $('#registarArea').hide();
+        $('#entrarArea').hide();
+    }
+});
 
 $(window).resize(function() {
     if ($(window).width() > 720) {
@@ -120,7 +120,7 @@ $(window).resize(function() {
 
     $('#slider').css({ width: slideWidth, height: slideHeight });
     
-    // $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+    $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 });
 
 function registar() {
