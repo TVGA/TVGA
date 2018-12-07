@@ -172,7 +172,7 @@
     $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e)    
     {
         console.log('fdsf')
-        if (player.isFullscreen()) {
+        if (player.isFullscreen() || !player.isFullscreen()) {
             if ($('#playerDiv').width() > $('#playerDiv').height()) {
                 weh();
             } else {
