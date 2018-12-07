@@ -148,12 +148,14 @@ function entrar() {
 }
 
 function canais() {
+    var x = 0;
     if(open) {
         $('#nav-icon').click();
+        x = 600;
     }
     setTimeout(function () {
         $('html, body').animate({
             scrollTop: $('#canais').offset().top
         }, 600);
-    }, 600);
+    }, x);
 }
