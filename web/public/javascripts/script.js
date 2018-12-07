@@ -159,9 +159,3 @@ function canais() {
         }, 600);
     }, x);
 }
-
-function top() {
-    $('html, body').animate({
-        scrollTop: '0'
-    }, 600);
-}
