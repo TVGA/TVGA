@@ -42,9 +42,9 @@ $('a.control_next').click(function () {
 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 110) {       
-        $('a[href="#top"]').css('display', 'block');   
+        $('.top').css('display', 'block');   
     } else {
-        $('a[href="#top"]').css('display', 'none');
+        $('.top').css('display', 'none');
     }
 });
 
@@ -158,4 +158,10 @@ function canais() {
             scrollTop: $('#canais').offset().top
         }, 600);
     }, x);
+}
+
+function canais() {
+    $('html, body').animate({
+        scrollTop: '0'
+    }, 600);
 }
