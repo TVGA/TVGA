@@ -144,9 +144,7 @@ function entrar() {
 }
 
 function canais() {
-    setTimeout(function () {
-        $('#nav-icon').click();
-    }, 600);
+    $('#nav-icon').click();
     $('html, body').animate({
         scrollTop: $('#canais').offset().top
     }, 600);
