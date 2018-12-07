@@ -162,6 +162,6 @@ function canais() {
 
 function top() {
     $('html, body').animate({
-        scrollTop: $('#top').offset().top
+        scrollTop: '0'
     }, 600);
 }
