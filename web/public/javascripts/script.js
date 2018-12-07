@@ -147,5 +147,5 @@ function canais() {
     $('#nav-icon').click();
     $('html, body').animate({
         scrollTop: $('#canais').offset().top
-    }, 600);
+    }, 800);
 }
