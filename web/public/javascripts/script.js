@@ -45,6 +45,10 @@ $(window).scroll(function() {
     } else {
         $('a[href="#top"]').css('display', 'none');
     }
+
+    if($('#slider').css('margin') == '90vw auto 15vw auto') {
+        $('#slider').css('margin', '90vw auto 15vw auto');
+    }
 });
 
 function hover(element, src) {
