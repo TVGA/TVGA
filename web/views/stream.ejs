@@ -70,7 +70,7 @@
             $('html').css({
                 cursor: 'none'
             });
-            if($(window).width() > 1280 && open) {
+            if($(window).width() > 1280 && openC) {
                 var cw = -1 * $('#canaisSide').width() - 10;
                 $('#canaisSide').animate({ left: cw + 'px' }, 600);
                 show = true;
@@ -107,7 +107,7 @@
         }
     });
 
-    var open = false;
+    var openC = false;
 
     if($(window).width() < 1280) {
         $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '/#canais');
@@ -121,10 +121,10 @@
         event.preventDefault();
         
         if($('#canaisSide').position().left != 0) {
-            open = true;
+            openC = true;
             $('#canaisSide').animate({ left: '0' }, 600);
         } else {
-            open = false;
+            openC = false;
             var cw = -1 * $('#canaisSide').width() - 10;
             $('#canaisSide').animate({ left: cw + 'px' }, 600);
         }
@@ -132,7 +132,7 @@
 
     $(document).on('click', '.canaisSide', function (event) {
         event.preventDefault();
-        open = false;
+        openC = false;
         var cw = -1 * $('#canaisSide').width() - 10
         $('#canaisSide').animate({ left: cw + 'px' }, 600);
     });
@@ -152,7 +152,7 @@
             $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '/#canais');
             $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '/#canais');
         } else {
-            if(open) {
+            if(openC) {
                 $('#canaisSide').css({ left: '0' });
             } else {
                 var cw = -1 * $('#canaisSide').width() - 10;
@@ -182,6 +182,18 @@
             $('#player_html5_api').css('top', '0');
             $('#player_html5_api').width('100%');
             $('#player_html5_api').height('100%');
+        }
+    });
+
+    $(document).keyup(function(e) {
+        if (e.key === "Escape") {
+            if (player.isFullscreen()) {
+                if ($('#playerDiv').width() > $('#playerDiv').height()) {
+                    weh();
+                } else {
+                    hed();
+                }
+            }
         }
     });
 </script>
