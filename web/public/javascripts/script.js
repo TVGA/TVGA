@@ -45,6 +45,8 @@ $(window).scroll(function() {
     } else {
         $('a[href="#top"]').css('display', 'none');
     }
+
+    console.log($('#slider').css('margin'))
 });
 
 function hover(element, src) {
