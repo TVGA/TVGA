@@ -160,7 +160,7 @@ function canais() {
     }, x);
 }
 
-function top() {
+function topPage() {
     $('html, body').animate({
         scrollTop: '0'
     }, 600);
