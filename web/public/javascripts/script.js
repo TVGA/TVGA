@@ -130,13 +130,24 @@ $(window).resize(function() {
 });
 
 function registar() {
+    $('#nav-icon').click();
     $('#registarArea').show();
     var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
     $('#registarArea > .form').css('top', centerForm + 'px');
 }
 
 function entrar() {
+    $('#nav-icon').click();
     $('#entrarArea').show();
     var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
     $('#entrarArea > .form').css('top', centerForm + 'px');
+}
+
+function canais() {
+    setTimeout(function () {
+        $('#nav-icon').click();
+    }, 600);
+    $('html, body').animate({
+        scrollTop: $('#canais').offset().top
+    }, 600);
 }
