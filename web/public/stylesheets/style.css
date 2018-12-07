@@ -207,6 +207,7 @@ footer span {
     border-radius: 1vw; 
     box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75); 
     display: none;
+    cursor: pointer;
     z-index: 999;
 }
 

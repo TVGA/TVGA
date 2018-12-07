@@ -112,6 +112,9 @@
     if($(window).width() < 1280) {
         $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '/#canais');
         $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '/#canais');
+    } else {
+        $('body > header > nav > ul > li:nth-child(3) > a').attr('href', '#canais');
+        $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '#canais');
     }
 
     $(document).on('click', 'a[href="#canais"]', function (event) {
