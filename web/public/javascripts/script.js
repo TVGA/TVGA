@@ -1,4 +1,3 @@
-let open = false;
 let slideCount = $('#slider ul li').length;
 let slideWidth = $('#slider ul li').width();
 let slideHeight = $('#slider ul li').height();
@@ -46,11 +45,6 @@ $(window).scroll(function() {
     } else {
         $('a[href="#top"]').css('display', 'none');
     }
-
-    if(open) {
-        console.log('gdgdg')
-        $('#slider').css('margin', '90vw auto 15vw auto');
-    }
 });
 
 function hover(element, src) {
@@ -64,11 +58,6 @@ function unhover(element, src) {
 $(document).ready(function(){
     $('#nav-icon').click(function(){
         $(this).toggleClass('open');
-        if(open) {
-            open = false;
-        } else {
-            open = true;
-        }
         if($('#nav-menu').css('display') == 'none') {
             $('#nav-menu').slideDown(600);
             $('.slider').animate({ marginTop: '70vw' }, 600);    
@@ -129,7 +118,7 @@ $(window).resize(function() {
     slideHeight = $('#slider ul li').height();
     sliderUlWidth = slideCount * slideWidth;
 
-    $('#slider').css({ width: slideWidth, height: slideHeight });
+    // $('#slider').css({ width: slideWidth, height: slideHeight });
     
     // $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 });
