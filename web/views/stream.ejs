@@ -137,27 +137,6 @@
         $('#canaisSide').animate({ left: cw + 'px' }, 600);
     });
 
-    var fullscreen = false;
-
-    $(document).on('click', '.vjs-fullscreen-control', function (event) {
-        event.preventDefault();
-        console.log('lljihj');
-        if(fullscreen) {
-            if ($('#playerDiv').width() > $('#playerDiv').height()) {
-                weh();
-            } else {
-                hed();
-            }
-            fullscreen = true;
-        } else {
-            $('#player_html5_api').css('left', '0');
-            $('#player_html5_api').css('top', '0');
-            $('#player_html5_api').width('100%');
-            $('#player_html5_api').height('100%');
-            fullscreen = false;
-        }
-    });
-
     $(window).resize(function() {
         var cw = -1 * $('#canaisSide').width() - 10;
         var hh = $('header').height() + 20;
@@ -183,11 +162,11 @@
             $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '#canais');
         }
         
-        if ($('#playerDiv').width() > $('#playerDiv').height()) {
-            weh();
-        } else {
-            hed();
-        }
+        // if ($('#playerDiv').width() > $('#playerDiv').height()) {
+        //     weh();
+        // } else {
+        //     hed();
+        // }
     });
 
     $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e)    
