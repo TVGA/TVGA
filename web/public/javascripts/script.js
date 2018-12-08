@@ -1,5 +1,3 @@
-var md = new MobileDetect(window.navigator.userAgent);
-
 let open = false;
 let slideCount = $('#slider ul li').length;
 let slideWidth = $('#slider ul li').width();
