@@ -11,6 +11,14 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 let logger = require('morgan');
+var expressValidator = require('express-validator');
+var session = require('express-session');
+var passport = require('passport');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/tvga', { useNewUrlParser: true });
+mongoose.set('useCreateIndex', true);
+var db = mongoose.connection;
 
 let indexRouter = require('./routes/index');
 let adminApp = require('./admin/app');
@@ -26,6 +34,41 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Express Session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
+
+// Passport init
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Express Validator
+app.use(expressValidator({
+    errorFormatter: function(param, msg, value) {
+        var namespace = param.split('.')
+        , root    = namespace.shift()
+        , formParam = root;
+
+        while(namespace.length) {
+        formParam += '[' + namespace.shift() + ']';
+        }
+        return {
+        param : formParam,
+        msg   : msg,
+        value : value
+        };
+    }
+}));
+
+// Global Vars
+app.use(function (req, res, next) {
+    res.locals.user = req.user || null;
+    next();
+});
 
 app.use(subdomain('admin', adminApp));
 app.use('/', indexRouter);

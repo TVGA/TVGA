@@ -364,6 +364,14 @@ video {
     background-color: #D4AF37;
 }
 
+.err {
+    font-size: 1.2em;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
