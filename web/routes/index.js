@@ -4,11 +4,9 @@ let MobileDetect = require('mobile-detect');
 let passport = require('passport');
 let LocalStrategy = require('passport-local').Strategy;
 let canais = require('../../python/canais.json');
-// let hash = require('../../python/streamPath.json');
-
+let hash = require('../../python/streamPath.json');
 let User = require('../models/user');
 
-hash = 'stream'
 
 if(!hash) {
     hash = 'stream';
