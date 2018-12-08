@@ -24,6 +24,12 @@
         autoplay: true
     });
 
+    console.log( "Mobile: " + md.mobile());
+    console.log( "Phone: " + md.phone());
+    console.log( "Tablet: " + md.tablet());
+    console.log( "OS: " + md.os());
+    console.log( "userAgent: " + md.userAgent());
+
     function hed() {
         var vWidth = $('#playerDiv').width();
         var vHeight = (9 * vWidth) / 16;
@@ -162,11 +168,11 @@
             $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '#canais');
         }
         
-        // if ($('#playerDiv').width() > $('#playerDiv').height()) {
-        //     weh();
-        // } else {
-        //     hed();
-        // }
+        if ($('#playerDiv').width() > $('#playerDiv').height()) {
+            weh();
+        } else {
+            hed();
+        }
     });
 
     $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e)    
