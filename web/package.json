@@ -17,6 +17,7 @@
     "express-subdomain": "^1.0.5",
     "fluent-ffmpeg": "^2.1.2",
     "helmet": "^3.14.0",
+    "mobile-detect": "^1.4.3",
     "morgan": "^1.9.1",
     "node-run-cmd": "^1.0.1"
   }

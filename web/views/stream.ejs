@@ -162,11 +162,13 @@
             $('#nav-menu > ul > li:nth-child(2) > a').attr('href', '#canais');
         }
         
-        if ($('#playerDiv').width() > $('#playerDiv').height()) {
-            weh();
-        } else {
-            hed();
-        }
+        <%if(mobile) { %>
+            if ($('#playerDiv').width() > $('#playerDiv').height()) {
+                weh();
+            } else {
+                hed();
+            }
+        <% } %>
     });
     
 
