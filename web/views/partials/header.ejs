@@ -27,13 +27,13 @@
 <div id="nav-menu">
     <ul>
         <li><a class="hvr-underline-from-center" href="/">INÍCIO</a></li>
-        <% if(!user) { %>
         <li><a class="hvr-underline-from-center" onclick="canais()">CANAIS</a></li>
+        <% if(!user) { %>
         <li><a class="hvr-underline-from-center" onclick="registar()">REGISTAR</a></li>
+        <li><a class="hvr-underline-from-center" onclick="entrar()">ENTRAR</a></li>
         <% } else { %>
         <li class="liNav"><a class="hvr-underline-from-right">CONTA</a></li>
         <li class="liNav" style="margin-right: -7vw;"><a class="hvr-underline-from-right" href="/sair">SAIR</a></li>
         <% } %>
-        <li><a class="hvr-underline-from-center" onclick="entrar()">ENTRAR</a></li>
     </ul> 
 </div>
