@@ -137,6 +137,24 @@
         $('#canaisSide').animate({ left: cw + 'px' }, 600);
     });
 
+    var fullscreen = false;
+
+    $(document).on('click', '.vjs-fullscreen-control', function (event) {
+        event.preventDefault();
+        if(fullscreen) {
+            if ($('#playerDiv').width() > $('#playerDiv').height()) {
+                weh();
+            } else {
+                hed();
+            }
+        } else {
+            $('#player_html5_api').css('left', '0');
+            $('#player_html5_api').css('top', '0');
+            $('#player_html5_api').width('100%');
+            $('#player_html5_api').height('100%');
+        }
+    });
+
     $(window).resize(function() {
         var cw = -1 * $('#canaisSide').width() - 10;
         var hh = $('header').height() + 20;
