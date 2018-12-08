@@ -16,10 +16,12 @@ for(let grupo in canais) {
   for(let canal in canais[grupo]) {
     router.get('/' + canal , function(req, res, next) {
       let md = new MobileDetect(req.headers['user-agent']);
+
       let mobile = false;
-      if(md.mobile() || md.phone() || md.tablet()) {
+      if(md.mobile() != null || md.phone() != null || md.tablet() != null) {
         mobile = true;
       }
+
       res.render('stream', { file: '/' + hash + '/' + canal + '.m3u8', canais: canais, canal: canal, mobile: mobile });
     });
   }
