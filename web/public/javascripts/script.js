@@ -109,7 +109,7 @@ $(window).resize(function() {
         $('#slider').css('margin', '10vw auto 3vw auto');
     }
 
-    if($(window).height() >  540) {
+    if($(window).height() >  580) {
         var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
         $('#registarArea > .form').css('top', centerForm + 'px');
     } else {
@@ -145,7 +145,7 @@ function registar() {
     $('#registarArea').show();
 
     var centerForm;
-    if($(window).height() >  540) {
+    if($(window).height() >  580) {
         centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
     } else {
         centerForm = 0;
