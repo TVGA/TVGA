@@ -278,6 +278,7 @@ video {
     text-align: center;
     display: none;
     z-index: 1000;
+    overflow: auto;
 }
 
 #entrarArea {

@@ -109,11 +109,20 @@ $(window).resize(function() {
         $('#slider').css('margin', '10vw auto 3vw auto');
     }
 
-    var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
-    $('#registarArea > .form').css('top', centerForm + 'px');
+    if($(window).height() >  $('#registarArea > .form').height()) {
+        var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+        $('#registarArea > .form').css('top', centerForm + 'px');
+    } else {
+        $('#registarArea > .form').css('top', '0');
+        
+    }
 
-    var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
-    $('#entrarArea > .form').css('top', centerForm + 'px');
+    if($(window).height() >  $('#entrarArea > .form').height()) { 
+        var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+        $('#entrarArea > .form').css('top', centerForm + 'px');
+    } else {
+        $('#entrarArea > .form').css('top', '0');
+    }
 
     slideCount = $('#slider ul li').length;
     slideWidth = $('#slider ul li').width();
@@ -134,7 +143,14 @@ function registar() {
         $('#nav-icon').click();
     }
     $('#registarArea').show();
-    var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+
+    var centerForm;
+    if($(window).height() >  $('#registarArea > .form').height()) {
+        centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+    } else {
+        centerForm = 0;
+    }
+
     $('#registarArea > .form').css('top', centerForm + 'px');
 }
 
@@ -143,7 +159,14 @@ function entrar() {
         $('#nav-icon').click();
     }
     $('#entrarArea').show();
-    var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+
+    var centerForm;
+    if($(window).height() >  $('#entrarArea > .form').height()) {
+        centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+    } else {
+        centerForm = 0;
+    }
+    
     $('#entrarArea > .form').css('top', centerForm + 'px');
 }
 
