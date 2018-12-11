@@ -278,7 +278,6 @@ video {
     text-align: center;
     display: none;
     z-index: 1000;
-    overflow: -webkit-paged-y;
 }
 
 #entrarArea {
@@ -289,7 +288,6 @@ video {
     text-align: center;
     display: none;
     z-index: 1000;
-    overflow: -webkit-paged-y;
 }
 
 .form {
