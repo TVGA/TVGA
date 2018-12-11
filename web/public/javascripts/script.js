@@ -109,20 +109,11 @@ $(window).resize(function() {
         $('#slider').css('margin', '10vw auto 3vw auto');
     }
 
-    if($(window).height() >  $('#registarArea > .form').height() + 80) {
-        var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
-        $('#registarArea > .form').css('top', centerForm + 'px');
-    } else {
-        $('#registarArea > .form').css('top', '0');
-        
-    }
+    var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+    $('#registarArea > .form').css('top', centerForm + 'px');
 
-    if($(window).height() >  $('#entrarArea > .form').height()) { 
-        var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
-        $('#entrarArea > .form').css('top', centerForm + 'px');
-    } else {
-        $('#entrarArea > .form').css('top', '0');
-    }
+    var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+    $('#entrarArea > .form').css('top', centerForm + 'px');
 
     slideCount = $('#slider ul li').length;
     slideWidth = $('#slider ul li').width();
@@ -143,14 +134,7 @@ function registar() {
         $('#nav-icon').click();
     }
     $('#registarArea').show();
-
-    var centerForm;
-    if($(window).height() >  $('#registarArea > .form').height() + 80) {
-        centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
-    } else {
-        centerForm = 0;
-    }
-
+    var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
     $('#registarArea > .form').css('top', centerForm + 'px');
 }
 
@@ -159,14 +143,7 @@ function entrar() {
         $('#nav-icon').click();
     }
     $('#entrarArea').show();
-
-    var centerForm;
-    if($(window).height() >  $('#entrarArea > .form').height()) {
-        centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
-    } else {
-        centerForm = 0;
-    }
-    
+    var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
     $('#entrarArea > .form').css('top', centerForm + 'px');
 }
 
