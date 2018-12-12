@@ -281,10 +281,6 @@ video {
     overflow-y: -webkit-paged-y;
 }
 
-#registarArea::-webkit-scrollbar { 
-    display: none; 
-}
-
 #entrarArea {
     background-color: rgba(13, 15, 20, 0.7);
     position: fixed;
@@ -294,10 +290,6 @@ video {
     display: none;
     z-index: 1000;
     overflow-y: -webkit-paged-y;
-}
-
-#entrarArea::-webkit-scrollbar { 
-    display: none; 
 }
 
 .form {
