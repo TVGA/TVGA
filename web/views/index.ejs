@@ -37,7 +37,12 @@
             $('<div class="err" style="background: ' + background + ';"><%= message.msg %></div>').insertAfter(elFormString + ' > .form > form > h1');
         <% }); %>
         $(elFormString).show();
-        var centerForm = ($(window).height() - $(elFormString + ' > .form').height()) / 2;
+         var centerForm;
+        if($(elFormString + ' > .form').height() > $(window).height()) {
+            centerForm = 0;
+        } else {
+            centerForm = ($(window).height() - $(elFormString + ' > .form').height()) / 2;
+        }
         $(elFormString + ' > .form').css('top', centerForm + 'px');
 
         $('.form > i').click(function(){
