@@ -116,8 +116,12 @@ $(window).resize(function() {
         $('#registarArea > .form').css('top', centerForm + 'px');   
     }
 
-    var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
-    $('#entrarArea > .form').css('top', centerForm + 'px');
+    if($('#entrarArea > .form').height() > $(window).height()) {
+        $('#entrarArea > .form').css('top', '0px');  
+    } else {
+        var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+        $('#entrarArea > .form').css('top', centerForm + 'px');   
+    }
 
     slideCount = $('#slider ul li').length;
     slideWidth = $('#slider ul li').width();
@@ -153,7 +157,13 @@ function entrar() {
         $('#nav-icon').click();
     }
     $('#entrarArea').show();
-    var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+
+    var centerForm;
+    if($('#entrarArea > .form').height() > $(window).height()) {
+        centerForm = 0;
+    } else {
+        centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+    }
     $('#entrarArea > .form').css('top', centerForm + 'px');
 }
 
