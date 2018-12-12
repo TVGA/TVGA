@@ -110,14 +110,14 @@ $(window).resize(function() {
     }
 
     if($('#registarArea > .form').height() > $(window).height()) {
-        $('#registarArea > .form').css('top', '0px');  
+        $('#registarArea > .form').css('top', '2.5%');  
     } else {
         var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
         $('#registarArea > .form').css('top', centerForm + 'px');   
     }
 
     if($('#entrarArea > .form').height() > $(window).height()) {
-        $('#entrarArea > .form').css('top', '0px');  
+        $('#entrarArea > .form').css('top', '2.5%');  
     } else {
         var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
         $('#entrarArea > .form').css('top', centerForm + 'px');   
@@ -143,13 +143,12 @@ function registar() {
     }
     $('#registarArea').show();
 
-    var centerForm;
     if($('#registarArea > .form').height() > $(window).height()) {
-        centerForm = 0;
+        $('#registarArea > .form').css('top', '2.5%');
     } else {
-        centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+        var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+        $('#registarArea > .form').css('top', centerForm + 'px');
     }
-    $('#registarArea > .form').css('top', centerForm + 'px');
 }
 
 function entrar() {
@@ -158,13 +157,12 @@ function entrar() {
     }
     $('#entrarArea').show();
 
-    var centerForm;
     if($('#entrarArea > .form').height() > $(window).height()) {
-        centerForm = 0;
+        $('#entrarArea > .form').css('top', '2.5%');
     } else {
-        centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+        var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
+        $('#entrarArea > .form').css('top', centerForm + 'px');
     }
-    $('#entrarArea > .form').css('top', centerForm + 'px');
 }
 
 function canais() {
