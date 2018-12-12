@@ -377,7 +377,7 @@ video {
 .err {
     font-size: 1.2em;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 0;
     margin-bottom: 8px;
     width: 100%;
 }
