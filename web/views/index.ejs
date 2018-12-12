@@ -39,9 +39,11 @@
         $(elFormString).show();
         if($(elFormString + ' > .form').height() > $(window).height()) {
             $(elFormString + ' > .form').css('top', '2.5%');
+            $(elFormString + ' > .form').css('margin-bottom', '2.5%');
         } else {
             var centerForm = ($(window).height() - $(elFormString + ' > .form').height()) / 2;
             $(elFormString + ' > .form').css('top', centerForm + 'px');
+             $(elFormString + ' > .form').css('margin-bottom', '0');
         }
 
         $('.form > i').click(function(){
