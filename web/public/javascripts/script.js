@@ -110,8 +110,8 @@ $(window).resize(function() {
     }
 
     if($('#registarArea > .form').height() > $(window).height()) {
-        $('#registarArea > .form').css('top', '2.5%');  
-        $('#registarArea > .form').css('margin-bottom', '2.5%');  
+        $('#registarArea > .form').css('top', '2.vh%');  
+        $('#registarArea > .form').css('margin-bottom', '2.5vh');  
     } else {
         var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
         $('#registarArea > .form').css('top', centerForm + 'px'); 
@@ -119,8 +119,8 @@ $(window).resize(function() {
     }
 
     if($('#entrarArea > .form').height() > $(window).height()) {
-        $('#entrarArea > .form').css('top', '2.5%'); 
-        $('#entrarArea > .form').css('margin-bottom', '2.5%'); 
+        $('#entrarArea > .form').css('top', '2.5vh'); 
+        $('#entrarArea > .form').css('margin-bottom', '2.5vh'); 
     } else {
         var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
         $('#entrarArea > .form').css('top', centerForm + 'px');   
@@ -148,8 +148,8 @@ function registar() {
     $('#registarArea').show();
 
     if($('#registarArea > .form').height() > $(window).height()) {
-        $('#registarArea > .form').css('top', '2.5%');
-        $('#registarArea > .form').css('margin-bottom', '2.5%');
+        $('#registarArea > .form').css('top', '2.5vh');
+        $('#registarArea > .form').css('margin-bottom', '2.5vh');
     } else {
         var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
         $('#registarArea > .form').css('top', centerForm + 'px');
@@ -164,8 +164,8 @@ function entrar() {
     $('#entrarArea').show();
 
     if($('#entrarArea > .form').height() > $(window).height()) {
-        $('#entrarArea > .form').css('top', '2.5%');
-        $('#entrarArea > .form').css('margin-bottom', '2.5%');
+        $('#entrarArea > .form').css('top', '2.5vh');
+        $('#entrarArea > .form').css('margin-bottom', '2.5vh');
     } else {
         var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
         $('#entrarArea > .form').css('top', centerForm + 'px');
