@@ -115,8 +115,8 @@ passport.deserializeUser(function (id, done) {
 	});
 });
 
-router.post('/entrar', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/'}), function (req, res, next) {
-		res.redirect('/');
+router.post('/entrar', passport.authenticate('local', { successRedirect: '/', failWithError: true }), function (err, req, res, next) {
+		res.send(err);
 });
 
 router.get('/sair', function (req, res, next) {
