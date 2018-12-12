@@ -109,8 +109,12 @@ $(window).resize(function() {
         $('#slider').css('margin', '10vw auto 3vw auto');
     }
 
-    var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
-    $('#registarArea > .form').css('top', centerForm + 'px');
+    if($('#registarArea > .form').height() > $(window).height()) {
+        $('#registarArea > .form').css('top', '0px');  
+    } else {
+        var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+        $('#registarArea > .form').css('top', centerForm + 'px');   
+    }
 
     var centerForm = ($(window).height() - $('#entrarArea > .form').height()) / 2;
     $('#entrarArea > .form').css('top', centerForm + 'px');
@@ -136,7 +140,7 @@ function registar() {
     $('#registarArea').show();
 
     var centerForm;
-    if($('#registarArea > .form').height() < $(window).height()) {
+    if($('#registarArea > .form').height() > $(window).height()) {
         centerForm = 0;
     } else {
         centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
