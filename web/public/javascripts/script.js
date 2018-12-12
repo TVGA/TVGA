@@ -134,7 +134,13 @@ function registar() {
         $('#nav-icon').click();
     }
     $('#registarArea').show();
-    var centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+
+    var centerForm;
+    if($('#registarArea > .form').height() < $(window).height()) {
+        centerForm = 0;
+    } else {
+        centerForm = ($(window).height() - $('#registarArea > .form').height()) / 2;
+    }
     $('#registarArea > .form').css('top', centerForm + 'px');
 }
 
