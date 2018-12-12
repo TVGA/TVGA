@@ -278,11 +278,6 @@ video {
     text-align: center;
     display: none;
     z-index: 1000;
-    overflow-y: -webkit-paged-y;
-}
-
-#registarArea::-webkit-scrollbar { 
-    display: none; 
 }
 
 #entrarArea {
@@ -293,11 +288,6 @@ video {
     text-align: center;
     display: none;
     z-index: 1000;
-    overflow-y: -webkit-paged-y;
-}
-
-#entrarArea::-webkit-scrollbar { 
-    display: none; 
 }
 
 .form {
